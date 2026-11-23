@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Top-up History · AFC System</title>
+<meta name="description" content="Automated Fare Collection & Access Control System — front-end prototype for Rangkaian Transit Nasional. Static demonstration data only.">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar__top">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Z"/><path d="M4 10h16M9 13h.01M15 13h.01"/><path d="m7 17-2 4M17 17l2 4"/></svg></span>
+        <span>
+          <span class="brand__name">AFC System</span>
+          <span class="brand__sub">Passenger Portal</span>
+        </span>
+      </a>
+    </div>
+    <div class="sidebar__rule"></div>
+    <div class="nav-group">
+      <span class="nav-group__label">Passenger Portal</span>
+      <nav class="nav" aria-label="Passenger Portal navigation">
+        <li><a href="passenger-dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Dashboard</span></a></li>
+        <li><a href="my-tickets.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a3 3 0 0 0 0 6v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a3 3 0 0 0 0-6Z"/><path d="M13 5v2M13 11v2M13 17v2"/></svg><span>My Tickets</span></a></li>
+        <li><a href="wallet.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M3 10h18"/><path d="M16 14h2"/></svg><span>My Wallet</span></a></li>
+        <li><a href="topup-history.html" class="is-active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg><span>Top-up History</span></a></li>
+        <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 17l-5-5 5-5"/><path d="M5 12h11"/></svg><span>Logout</span></a></li>
+      </nav>
+    </div>
+    <div class="sidebar__foot">
+      <details class="module-switch">
+        <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg> Switch module <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <ul>
+        <li><a href="../pages/passenger-dashboard.html" style="color:#7fd8cb;font-weight:600">Passenger Portal<span class="sr-only"> — Aizat</span></a></li><li><a href="../pages/media-processing.html">Media Processing<span class="sr-only"> — Mirul</span></a></li><li><a href="../pages/gate-control.html">Gate Control<span class="sr-only"> — Gate Control</span></a></li><li><a href="../pages/fare-management.html">Fare Management<span class="sr-only"> — Ile</span></a></li><li><a href="../pages/clearing-house.html">Clearing House<span class="sr-only"> — Harith Hakim</span></a></li><li><a href="../index.html">Prototype home</a></li>
+        </ul>
+      </details>
+      <div class="sidebar__meta"><span class="dot"></span> Static prototype · v1.0</div>
+    </div>
+  </aside>
+  <div class="main" id="main">
+  <header class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="crumbs__sep" aria-hidden="true">/</span><a href="passenger-dashboard.html">Passenger</a><span class="crumbs__sep" aria-hidden="true">/</span><a href="wallet.html">My Wallet</a><span class="crumbs__sep" aria-hidden="true">/</span><span class="crumbs__current" aria-current="page">Top-up History</span>
+    </nav>
+    <div class="topbar__meta">
+      <span class="pill pill--demo" title="This build is a static front-end prototype">
+        <span class="pill__dot" aria-hidden="true"></span><span class="pill__text">Demo data</span>
+      </span>
+      <span class="pill topbar__clock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>23 Nov 2026 · 09:42 MYT</span>
+      <div class="user">
+        <span class="avatar" aria-hidden="true">NA</span>
+        <span class="user__text">
+          <span class="user__name">Nurul Aisyah</span>
+          <span class="user__role">Passenger · PSG-2026-004178</span>
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="content" id="main">
+    <div class="page-head">
+      <div>
+        <p class="eyebrow">Member 1 · Passenger Portal</p>
+        <h1 class="page-title">Top-up History</h1>
+        <p class="page-sub">Every wallet credit attempted on this account, including pending and declined payments.</p>
+      </div>
+      <div class="page-actions"><a class="btn btn--primary" href="wallet.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Top up wallet</a></div>
+    </div>
+    <div class="grid grid--metrics">
+  <div class="metric metric--navy"><p class="metric__label">Total credited</p><p class="metric__value">RM 260.00</p><p class="metric__foot">6 top-ups since 30 Sep 2026</p></div>
+  <div class="metric metric--ok"><p class="metric__label">Successful</p><p class="metric__value">RM 240.00</p><p class="metric__foot">4 completed top-ups</p></div>
+  <div class="metric "><p class="metric__label">Pending</p><p class="metric__value">RM 20.00</p><p class="metric__foot">1 awaiting confirmation</p></div>
+  <div class="metric metric--bad"><p class="metric__label">Failed</p><p class="metric__value">RM 10.00</p><p class="metric__foot">1 declined · refunded</p></div>
+</div>
+
+<div class="card mt-2">
+  <div class="card__head">
+    <div>
+      <h2 class="card__title">Top-up transaction history</h2>
+      <p class="card__sub">All wallet credits for Nurul Aisyah binti Rahman · PSG-2026-004178</p>
+    </div>
+    <div class="btn-row">
+      <a class="btn btn--outline btn--sm" href="wallet.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> New top-up</a>
+      <button class="btn btn--outline btn--sm" type="button" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5"/><path d="M4 20h16"/></svg> Export CSV</button>
+    </div>
+  </div>
+
+  <div class="filters">
+    <div class="field filters__search">
+      <label for="f-tx">Search transaction</label>
+      <div style="position:relative"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <input class="input" type="search" id="f-tx" placeholder="TOP-2026-11-…">
+      </div>
+    </div>
+    <div class="field"><label for="f-from">From date</label><input class="input" type="date" id="f-from" value="2026-09-01"></div>
+    <div class="field"><label for="f-to">To date</label><input class="input" type="date" id="f-to" value="2026-11-23"></div>
+    <div class="field"><label for="f-status">Status</label><select class="select" id="f-status"><option>All statuses</option><option>Completed</option><option>Pending</option><option>Failed</option></select></div>
+  </div>
+
+  <div class="table-wrap"><table class="table " style="min-width:860px"><thead><tr><th>Transaction ID</th><th>Date &amp; time</th><th class="num">Amount</th><th>Payment method</th><th>Status</th><th>Gateway</th><th></th></tr></thead><tbody><tr><td><span class="cell-id">TOP-2026-11-21-0092</span></td><td class="nowrap">21 Nov 2026 · 19:42</td><td class="num"><span class="amount">RM 50.00</span></td><td>FPX Online Banking</td><td><span class="badge badge--success">Completed</span></td><td class="cell-muted">Airwallex MY</td><td><button class="btn btn--ghost btn--sm" type="button">Receipt</button></td></tr><tr><td><span class="cell-id">TOP-2026-11-14-0671</span></td><td class="nowrap">14 Nov 2026 · 08:05</td><td class="num"><span class="amount">RM 30.00</span></td><td>Debit Card ···· 4417</td><td><span class="badge badge--success">Completed</span></td><td class="cell-muted">Stripe MY</td><td><button class="btn btn--ghost btn--sm" type="button">Receipt</button></td></tr><tr><td><span class="cell-id">TOP-2026-11-02-0344</span></td><td class="nowrap">02 Nov 2026 · 12:18</td><td class="num"><span class="amount">RM 100.00</span></td><td>FPX Online Banking</td><td><span class="badge badge--success">Completed</span></td><td class="cell-muted">Airwallex MY</td><td><button class="btn btn--ghost btn--sm" type="button">Receipt</button></td></tr><tr><td><span class="cell-id">TOP-2026-10-26-0188</span></td><td class="nowrap">26 Oct 2026 · 21:30</td><td class="num"><span class="amount">RM 20.00</span></td><td>Touch 'n Go eWallet</td><td><span class="badge badge--warning">Pending</span></td><td class="cell-muted">TNG Digital</td><td><button class="btn btn--ghost btn--sm" type="button">Receipt</button></td></tr><tr><td><span class="cell-id">TOP-2026-10-12-0521</span></td><td class="nowrap">12 Oct 2026 · 17:55</td><td class="num"><span class="amount">RM 10.00</span></td><td>Debit Card ···· 4417</td><td><span class="badge badge--danger">Failed</span></td><td class="cell-muted">Stripe MY</td><td><button class="btn btn--ghost btn--sm" type="button">Receipt</button></td></tr><tr><td><span class="cell-id">TOP-2026-09-30-0038</span></td><td class="nowrap">30 Sep 2026 · 09:11</td><td class="num"><span class="amount">RM 50.00</span></td><td>FPX Online Banking</td><td><span class="badge badge--success">Completed</span></td><td class="cell-muted">Airwallex MY</td><td><button class="btn btn--ghost btn--sm" type="button">Receipt</button></td></tr></tbody><tfoot><tr><td>Total credited (completed only)</td><td></td><td class="num">RM 240.00</td><td></td><td></td><td></td><td></td></tr></tfoot></table></div>
+
+  <div class="card__foot">
+    <span>Showing 6 of 6 records · filtered by 01 Sep – 23 Nov 2026</span>
+    <span><span class="demo-tag">Filters are visual only</span></span>
+  </div>
+</div>
+
+<div class="grid grid--3 mt-2">
+  <section class="card "><div class="card__head"><div><h2 class="card__title">About pending top-ups</h2></div></div><div class="card__body"><p class="hint">A pending record means the payment gateway has accepted the request but has not confirmed the bank transfer. The wallet is only credited once confirmation arrives, usually within 15 minutes.</p></div></section>
+  <section class="card "><div class="card__head"><div><h2 class="card__title">About failed top-ups</h2></div></div><div class="card__body"><p class="hint">Declined payments never reach the wallet. If your bank shows a debit for a failed record, it is reversed automatically within 3 working days.</p></div></section>
+  <section class="card "><div class="card__head"><div><h2 class="card__title">Receipts</h2></div></div><div class="card__body"><p class="hint">A PDF receipt can be generated for any completed top-up. Receipts show the gateway reference and are accepted for company travel claims.</p><p class="hint mt-2"><strong>Note:</strong> receipt download is not wired in this prototype.</p></div></section>
+</div>
+  </main>
+  <footer class="footer">
+    <span>© 2026 AFC System · Rangkaian Transit Nasional — front-end prototype. All records are fictional sample data.</span>
+    <span class="footer__links"><a href="../pages/passenger-dashboard.html">Passenger Portal</a><a href="../pages/media-processing.html">Media Processing</a><a href="../pages/gate-control.html">Gate Control</a><a href="../pages/fare-management.html">Fare Management</a><a href="../pages/clearing-house.html">Clearing House</a><a href="../index.html">Home</a></span>
+  </footer>
+  </div>
+</div>
+</body>
+</html>

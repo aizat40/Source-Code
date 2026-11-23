@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AFC System · Automated Fare Collection &amp; Access Control</title>
+<meta name="description" content="Automated Fare Collection & Access Control System — front-end prototype for Rangkaian Transit Nasional. Static demonstration data only.">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+<header class="topbar">
+  <nav class="crumbs" aria-label="Breadcrumb">
+    <span class="crumbs__current" style="display:flex;align-items:center;gap:8px">
+      <img src="assets/images/logo-mark.svg" width="24" height="24" alt="">AFC System</span>
+    <span class="crumbs__sep" aria-hidden="true">/</span>
+    <span class="crumbs__module" style="color:var(--muted)">Module index</span>
+  </nav>
+  <div class="topbar__meta">
+    <span class="pill pill--demo"><span class="pill__dot"></span><span class="pill__text">Demo data</span></span>
+    <span class="pill topbar__clock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>23 Nov 2026 · 09:42 MYT</span>
+    <span class="pill pill--live"><span class="pill__dot"></span>Static prototype</span>
+  </div>
+</header>
+
+<main class="content" id="main" style="max-width:1320px;margin:0 auto">
+<section class="hero">
+  <div>
+    <span class="hero__tag"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Z"/><path d="M4 10h16M9 13h.01M15 13h.01"/><path d="m7 17-2 4M17 17l2 4"/></svg> Front-end prototype · v1.0</span>
+    <h1 class="hero__title">One integrated system for every fare and every gate.</h1>
+    <p class="hero__lede">Automated Fare Collection & Access Control System for Rangkaian Transit Nasional. Registration, ticketing,
+      media validation, barrier control, distance-based fare calculation and daily settlement
+      reconciliation — presented as five connected modules sharing one design system.</p>
+    <div class="hero__actions">
+      <a class="btn btn--primary" href="pages/login.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg> Enter passenger portal</a>
+      <a class="btn btn--outline" href="pages/gate-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v16"/><path d="M12 8h5l2 4-2 4h-5"/><path d="M2 21h20"/><path d="M8 8v2"/></svg> Open gate control</a>
+      <a class="btn btn--outline" href="pages/clearing-house.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10"/><path d="m5 8 4 6H1l4-6Z"/><path d="m19 8 4 6h-8l4-6Z"/><path d="M5 8h14"/></svg> Clearing house</a>
+    </div>
+    <dl class="hero__stats">
+      <div class="hero__stat"><dt>Transactions today</dt><dd>2,847</dd></div>
+      <div class="hero__stat"><dt>Fare collected</dt><dd>RM 18,462.30</dd></div>
+      <div class="hero__stat"><dt>Gate devices</dt><dd>8 <small>network</small></dd></div>
+      <div class="hero__stat"><dt>Pages in prototype</dt><dd>16</dd></div>
+    </dl>
+  </div>
+
+  <div class="lanes">
+    <div class="lanes__head"><span>Fare collection by operator</span><span>23 Nov 2026</span></div>
+    <div class="lanes__row"><span class="lanes__code">RTN</span><span class="lanes__track"><span class="lanes__fill " style="width:42.5%"></span></span><span class="lanes__value">42.5%</span></div><div class="lanes__row"><span class="lanes__code">MLB</span><span class="lanes__track"><span class="lanes__fill " style="width:26.6%"></span></span><span class="lanes__value">26.6%</span></div><div class="lanes__row"><span class="lanes__code">ERM</span><span class="lanes__track"><span class="lanes__fill " style="width:23.4%"></span></span><span class="lanes__value">23.4%</span></div><div class="lanes__row"><span class="lanes__code">TAR</span><span class="lanes__track"><span class="lanes__fill lanes__fill--red" style="width:7.5%"></span></span><span class="lanes__value">7.5%</span></div>
+    <div class="lanes__head" style="border-bottom:0;border-top:1px solid rgba(255,255,255,0.12);padding-top:10px;margin-top:2px">
+      <span>Settlement reconciled</span><span style="color:#7fd8cb">2 of 4</span>
+    </div>
+  </div>
+</section>
+
+<div class="strip mt-2">
+  <div class="strip__item"><p class="strip__label">Build</p><p class="strip__value">Static HTML5 + CSS3</p></div>
+  <div class="strip__item"><p class="strip__label">Scripting</p><p class="strip__value">None — by design</p></div>
+  <div class="strip__item"><p class="strip__label">Data</p><p class="strip__value">Fictional sample records</p></div>
+  <div class="strip__item"><p class="strip__label">Last built</p><p class="strip__value">23 Nov 2026 · 09:42 MYT</p></div>
+</div>
+
+<figure class="figure mt-2">
+  <img src="assets/images/fare-flow.svg" width="640" height="320"
+       alt="Five-stage fare collection flow: register, validate, gate decision, fare settled, reconcile — mapped to modules M1 to M5.">
+  <figcaption class="figure__caption">
+    <span><strong>Fare collection flow</strong> — one journey passes through all five modules.</span>
+    <span>Sample trace: PSG-2026-004178 → RM 2.60</span>
+  </figcaption>
+</figure>
+
+<section class="mt-3">
+  <div class="section-head">
+    <div>
+      <h2 class="section-title">System modules</h2>
+      <p class="section-sub">Each module is owned by one team member and shares the same navigation and styling.</p>
+    </div>
+    <span class="pill"><span class="pill__dot"></span>5 modules · 16 pages</span>
+  </div>
+  <div class="grid grid--3"><a class="module-card" href="pages/passenger-dashboard.html">
+        <div class="module-card__top">
+          <span class="module-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>
+          <span class="module-card__num">MODULE 01</span>
+        </div>
+        <h3 class="module-card__title">Passenger Portal</h3>
+        <p class="module-card__desc">Registration, wallet, top-up and travel history.</p>
+        <div class="module-card__foot">
+          <span class="module-card__owner">Aizat</span>
+          <span class="module-card__go">Open →</span>
+        </div>
+      </a><a class="module-card" href="pages/media-processing.html">
+        <div class="module-card__top">
+          <span class="module-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M20 8V5a1 1 0 0 0-1-1h-3M4 16v3a1 1 0 0 0 1 1h3M20 16v3a1 1 0 0 1-1 1h-3"/><path d="M4 12h16"/></svg></span>
+          <span class="module-card__num">MODULE 02</span>
+        </div>
+        <h3 class="module-card__title">Media Processing</h3>
+        <p class="module-card__desc">NFC cards, mobile QR and paper barcode validation.</p>
+        <div class="module-card__foot">
+          <span class="module-card__owner">Mirul</span>
+          <span class="module-card__go">Open →</span>
+        </div>
+      </a><a class="module-card" href="pages/gate-control.html">
+        <div class="module-card__top">
+          <span class="module-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v16"/><path d="M12 8h5l2 4-2 4h-5"/><path d="M2 21h20"/><path d="M8 8v2"/></svg></span>
+          <span class="module-card__num">MODULE 03</span>
+        </div>
+        <h3 class="module-card__title">Gate Control</h3>
+        <p class="module-card__desc">Entry and exit barriers, fare deduction at the gate.</p>
+        <div class="module-card__foot">
+          <span class="module-card__owner">Gate Control</span>
+          <span class="module-card__go">Open →</span>
+        </div>
+      </a><a class="module-card" href="pages/fare-management.html">
+        <div class="module-card__top">
+          <span class="module-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2Z"/><path d="M9 8h6M9 12h6"/></svg></span>
+          <span class="module-card__num">MODULE 04</span>
+        </div>
+        <h3 class="module-card__title">Fare Management</h3>
+        <p class="module-card__desc">Stations, fare rules and fare calculation breakdown.</p>
+        <div class="module-card__foot">
+          <span class="module-card__owner">Ile</span>
+          <span class="module-card__go">Open →</span>
+        </div>
+      </a><a class="module-card" href="pages/clearing-house.html">
+        <div class="module-card__top">
+          <span class="module-card__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10"/><path d="m5 8 4 6H1l4-6Z"/><path d="m19 8 4 6h-8l4-6Z"/><path d="M5 8h14"/></svg></span>
+          <span class="module-card__num">MODULE 05</span>
+        </div>
+        <h3 class="module-card__title">Clearing House</h3>
+        <p class="module-card__desc">Daily transaction totals and settlement reconciliation.</p>
+        <div class="module-card__foot">
+          <span class="module-card__owner">Harith Hakim</span>
+          <span class="module-card__go">Open →</span>
+        </div>
+      </a></div>
+</section>
+
+<div class="grid grid--sidebar mt-3">
+  <div class="stack">
+    <section class="card "><div class="card__head"><div><h2 class="card__title">How the prototype fits together</h2><p class="card__sub">A single journey touches all five modules, using the same sample passenger throughout.</p></div></div><div class="card__body">
+      <div class="timeline">
+        <div class="timeline__item">
+          <span class="timeline__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></span>
+          <div>
+            <p class="timeline__title">1 · Passenger registers and loads a wallet</p>
+            <p class="timeline__meta">Member 1 — registration, sign-in, wallet top-up, travel history</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M20 8V5a1 1 0 0 0-1-1h-3M4 16v3a1 1 0 0 0 1 1h3M20 16v3a1 1 0 0 1-1 1h-3"/><path d="M4 12h16"/></svg></span>
+          <div>
+            <p class="timeline__title">2 · Media processing reads the travel medium</p>
+            <p class="timeline__meta">Member 2 — NFC card, mobile QR or paper barcode resolves to a ticket</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v16"/><path d="M12 8h5l2 4-2 4h-5"/><path d="M2 21h20"/><path d="M8 8v2"/></svg></span>
+          <div>
+            <p class="timeline__title">3 · The gate decides and the barrier responds</p>
+            <p class="timeline__meta">Member 3 — entry permitted, exit fare deducted or access denied</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2Z"/><path d="M9 8h6M9 12h6"/></svg></span>
+          <div>
+            <p class="timeline__title">4 · The fare is priced by distance</p>
+            <p class="timeline__meta">Member 4 — station register, fare rules and the calculation breakdown</p>
+          </div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10"/><path d="m5 8 4 6H1l4-6Z"/><path d="m19 8 4 6h-8l4-6Z"/><path d="M5 8h14"/></svg></span>
+          <div>
+            <p class="timeline__title">5 · Every transaction is reconciled</p>
+            <p class="timeline__meta">Member 5 — daily totals compared against operator settlements</p>
+          </div>
+        </div>
+      </div></div><div class="card__foot"><span>Sample passenger</span><span class="mono">PSG-2026-004178 · Nurul Aisyah</span></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Sample data used across modules</h2><p class="card__sub">Identifiers repeat across modules so the demonstration can be followed end to end.</p></div></div><div class="card__body card__body--tight">
+      <div class="table-wrap"><table class="table" style="min-width:620px">
+        <thead><tr><th>Record</th><th>Value</th><th>Appears in</th></tr></thead>
+        <tbody>
+          <tr><td>Passenger</td><td class="cell-id">PSG-2026-004178 · Nurul Aisyah binti Rahman</td><td>Portal, media, gate, fare, clearing</td></tr>
+          <tr><td>Ticket</td><td class="cell-id">TKT-2026-884120 · Monthly Pass</td><td>Portal, media, gate, fare</td></tr>
+          <tr><td>Travel card</td><td class="cell-id">AFC-CARD-4401982</td><td>Portal, media, gate</td></tr>
+          <tr><td>Journey</td><td>KL Sentral → Subang Jaya · 18.6 km</td><td>Gate, fare, clearing</td></tr>
+          <tr><td>Fare</td><td>RM 2.60</td><td>Gate, fare, clearing, settlement</td></tr>
+          <tr><td>Wallet</td><td>RM 68.40</td><td>Portal, gate, fare</td></tr>
+        </tbody>
+      </table></div></div></section>
+  </div>
+
+  <div class="stack">
+    <section class="card metric--teal"><div class="card__head"><div><h2 class="card__title">Module ownership</h2></div></div><div class="card__body"><dl class="kv "><div><dt>Passenger Portal</dt><dd>Aizat</dd></div><div><dt>Media Processing</dt><dd>Mirul</dd></div><div><dt>Gate Control</dt><dd>Gate Control</dd></div><div><dt>Fare Management</dt><dd>Ile</dd></div><div><dt>Clearing House</dt><dd>Harith Hakim</dd></div><div><dt>Shared design system</dt><dd>Aizat</dd></div></dl></div><div class="card__foot"><span>Group project</span><span>BIC 21203</span></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Prototype scope</h2></div></div><div class="card__body">
+      <div class="stack stack--sm">
+        <div class="inline-list" style="justify-content:space-between">
+          <span class="text-sm">Backend integration</span><span class="badge badge--neutral">Not in scope</span></div>
+        <div class="inline-list" style="justify-content:space-between">
+          <span class="text-sm">JavaScript behaviour</span><span class="badge badge--neutral">None</span></div>
+        <div class="inline-list" style="justify-content:space-between">
+          <span class="text-sm">Authentication</span><span class="badge badge--warning">Visual only</span></div>
+        <div class="inline-list" style="justify-content:space-between">
+          <span class="text-sm">QR generation</span><span class="badge badge--warning">Placeholder</span></div>
+        <div class="inline-list" style="justify-content:space-between">
+          <span class="text-sm">Fare calculation</span><span class="badge badge--warning">Static values</span></div>
+        <div class="inline-list" style="justify-content:space-between">
+          <span class="text-sm">Responsive layout</span><span class="badge badge--success">Implemented</span></div>
+      </div></div><div class="card__foot"><a class="card__link" href="pages/register.html">Register a passenger →</a></div></section>
+
+    <div class="alert alert--info"><svg class="alert__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div><strong>Sample data notice</strong> All names, passenger IDs, card numbers, stations and amounts are fictional and exist only to demonstrate the interface. No real passenger data is used.</div></div>
+  </div>
+</div>
+
+<footer class="footer" style="margin:28px 0 -48px;background:transparent;border-top:1px solid var(--border);padding:16px 0">
+  <span>© 2026 AFC System prototype · Rangkaian Transit Nasional · Built with HTML5 and CSS3 only.</span>
+  <span class="footer__links">
+    <a href="pages/login.html">Sign in</a><a href="pages/register.html">Register</a>
+    <a href="pages/passenger-dashboard.html">Dashboard</a><a href="pages/reconciliation.html">Reconciliation</a>
+  </span>
+</footer>
+</main>
+</body>
+</html>

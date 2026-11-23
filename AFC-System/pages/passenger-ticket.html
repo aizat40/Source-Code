@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Passenger Ticket · AFC System</title>
+<meta name="description" content="Automated Fare Collection & Access Control System — front-end prototype for Rangkaian Transit Nasional. Static demonstration data only.">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar__top">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Z"/><path d="M4 10h16M9 13h.01M15 13h.01"/><path d="m7 17-2 4M17 17l2 4"/></svg></span>
+        <span>
+          <span class="brand__name">AFC System</span>
+          <span class="brand__sub">Media Processing</span>
+        </span>
+      </a>
+    </div>
+    <div class="sidebar__rule"></div>
+    <div class="nav-group">
+      <span class="nav-group__label">Media Processing</span>
+      <nav class="nav" aria-label="Media Processing navigation">
+        <li><a href="media-processing.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Dashboard</span></a></li>
+        <li><a href="media-processing.html#validation"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M20 8V5a1 1 0 0 0-1-1h-3M4 16v3a1 1 0 0 0 1 1h3M20 16v3a1 1 0 0 1-1 1h-3"/><path d="M4 12h16"/></svg><span>Ticket Validation</span></a></li>
+        <li><a href="passenger-ticket.html" class="is-active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a3 3 0 0 0 0 6v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a3 3 0 0 0 0-6Z"/><path d="M13 5v2M13 11v2M13 17v2"/></svg><span>Passenger Tickets</span></a></li>
+        <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 17l-5-5 5-5"/><path d="M5 12h11"/></svg><span>Logout</span></a></li>
+      </nav>
+    </div>
+    <div class="sidebar__foot">
+      <details class="module-switch">
+        <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg> Switch module <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <ul>
+        <li><a href="../pages/passenger-dashboard.html">Passenger Portal<span class="sr-only"> — Aizat</span></a></li><li><a href="../pages/media-processing.html" style="color:#7fd8cb;font-weight:600">Media Processing<span class="sr-only"> — Mirul</span></a></li><li><a href="../pages/gate-control.html">Gate Control<span class="sr-only"> — Gate Control</span></a></li><li><a href="../pages/fare-management.html">Fare Management<span class="sr-only"> — Ile</span></a></li><li><a href="../pages/clearing-house.html">Clearing House<span class="sr-only"> — Harith Hakim</span></a></li><li><a href="../index.html">Prototype home</a></li>
+        </ul>
+      </details>
+      <div class="sidebar__meta"><span class="dot"></span> Static prototype · v1.0</div>
+    </div>
+  </aside>
+  <div class="main" id="main">
+  <header class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="crumbs__sep" aria-hidden="true">/</span><a href="media-processing.html">Media Processing</a><span class="crumbs__sep" aria-hidden="true">/</span><span class="crumbs__current" aria-current="page">Passenger Tickets</span>
+    </nav>
+    <div class="topbar__meta">
+      <span class="pill pill--demo" title="This build is a static front-end prototype">
+        <span class="pill__dot" aria-hidden="true"></span><span class="pill__text">Demo data</span>
+      </span>
+      <span class="pill topbar__clock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>23 Nov 2026 · 09:42 MYT</span>
+      <div class="user">
+        <span class="avatar avatar--teal" aria-hidden="true">MH</span>
+        <span class="user__text">
+          <span class="user__name">Mirul Hakim</span>
+          <span class="user__role">Media Processing Operator</span>
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="content" id="main">
+    <div class="page-head">
+      <div>
+        <p class="eyebrow">Member 2 · Media Processing <span class="eyebrow__sep">/</span> <span class="eyebrow__muted">Ticket preview</span></p>
+        <h1 class="page-title">Passenger Ticket</h1>
+        <p class="page-sub">Digital ticket issued to Nurul Aisyah binti Rahman, showing the QR preview and the three media references.</p>
+      </div>
+      <div class="page-actions"><a class="btn btn--outline" href="media-processing.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M20 8V5a1 1 0 0 0-1-1h-3M4 16v3a1 1 0 0 0 1 1h3M20 16v3a1 1 0 0 1-1 1h-3"/><path d="M4 12h16"/></svg> Validate ticket</a><button class="btn btn--primary" type="button" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5"/><path d="M4 20h16"/></svg> Download (demo)</button></div>
+    </div>
+    <div class="alert alert--warning"><svg class="alert__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19L12 3Z"/><path d="M12 9v4M12 17h.01"/></svg><div><strong>Placeholder QR</strong> This QR code is a decorative placeholder. No QR encoding, generation or scanning is implemented in this phase — the media processing module validates reference IDs instead.</div></div>
+
+<div class="grid grid--sidebar mt-2">
+  <div class="stack">
+    <div class="ticket">
+  <div class="ticket__body">
+    <p class="ticket__brand"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Z"/><path d="M4 10h16M9 13h.01M15 13h.01"/><path d="m7 17-2 4M17 17l2 4"/></svg> Rangkaian Transit Nasional · Travel Ticket</p>
+    <p class="ticket__name">Nurul Aisyah binti Rahman</p>
+    <p class="ticket__id">PSG-2026-004178 · 010214-14-5583</p>
+
+    <div class="ticket__grid">
+      <div><p class="ticket__label">Ticket ID</p><p class="ticket__value mono">TKT-2026-884120</p></div>
+      <div><p class="ticket__label">Ticket type</p><p class="ticket__value">Monthly Pass · Adult</p></div>
+      <div><p class="ticket__label">Demo card ID</p><p class="ticket__value mono">AFC-CARD-4401982</p></div>
+      <div><p class="ticket__label">Ticket status</p><p class="ticket__value"><span class="badge badge--success">Active</span></p></div>
+      <div><p class="ticket__label">Validity</p><p class="ticket__value">01 Nov 2026 – 30 Nov 2026</p></div>
+      <div><p class="ticket__label">Valid zones</p><p class="ticket__value">Zone 1 – 3</p></div>
+    </div>
+  </div>
+
+  <div class="ticket__stub">
+    <p class="ticket__stub-label">QR code preview</p>
+    <div class="qr " role="img" aria-label="Decorative QR code placeholder — not scannable"><span class="qr__eye" aria-hidden="true"></span></div>
+    <p class="qr-caption">Visual placeholder only — not a scannable code.</p>
+  </div>
+</div>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Ticket details</h2><p class="card__sub">The same ticket can be presented in three media formats.</p></div></div><div class="card__body card__body--tight"><div class="table-wrap"><table class="table" style="min-width:540px">
+        <thead><tr><th>Reference type</th><th>Reference ID</th><th>Used at</th><th>Status</th></tr></thead>
+        <tbody>
+          <tr><td>NFC smart card</td><td class="cell-id">AFC-CARD-4401982</td><td>Entry &amp; exit gates</td><td><span class="badge badge--success">Active</span></td></tr>
+          <tr><td>Mobile QR reference</td><td class="cell-id">QR-MYR-884120</td><td>QR reader gates</td><td><span class="badge badge--success">Active</span></td></tr>
+          <tr><td>Paper barcode</td><td class="cell-id">BC-2026-884120</td><td>Barcode gates</td><td><span class="badge badge--success">Active</span></td></tr>
+        </tbody>
+      </table></div></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Fare product</h2></div></div><div class="card__body"><dl class="kv "><div><dt>Product</dt><dd>Monthly Pass · Adult</dd></div><div><dt>Fare class</dt><dd>Standard</dd></div><div><dt>Issued</dt><dd>28 Oct 2026</dd></div><div><dt>Validity period</dt><dd>01 Nov 2026 – 30 Nov 2026</dd></div><div><dt>Travel zones</dt><dd>Zone 1 – 3</dd></div><div><dt>Issuing operator</dt><dd>Rangkaian Transit Nasional</dd></div><div><dt>Purchase price</dt><dd>RM 150.00</dd></div><div><dt>Payment status</dt><dd><span class="badge badge--success">Paid</span></dd></div></dl></div></section>
+  </div>
+
+  <div class="stack">
+    <section class="card metric--teal"><div class="card__head"><div><h2 class="card__title">Presentation guidance</h2></div></div><div class="card__body">
+      <ol class="stack stack--sm" style="counter-reset:s">
+        <li class="inline-list" style="align-items:flex-start"><span class="badge badge--teal">1</span>
+          <span class="text-sm">Hold the NFC card flat against the reader panel on top of the gate.</span></li>
+        <li class="inline-list" style="align-items:flex-start"><span class="badge badge--teal">2</span>
+          <span class="text-sm">For mobile QR, increase screen brightness and hold 10 cm from the scanner.</span></li>
+        <li class="inline-list" style="align-items:flex-start"><span class="badge badge--teal">3</span>
+          <span class="text-sm">Paper barcodes should be unfolded and presented face-down to the laser reader.</span></li>
+        <li class="inline-list" style="align-items:flex-start"><span class="badge badge--teal">4</span>
+          <span class="text-sm">Wait for the green lamp before walking through — the barrier opens for 6 seconds.</span></li>
+      </ol></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Account state</h2></div></div><div class="card__body"><dl class="kv "><div><dt>Passenger</dt><dd>Nurul Aisyah binti Rahman</dd></div><div><dt>Passenger ID</dt><dd class="mono">PSG-2026-004178</dd></div><div><dt>Account status</dt><dd><span class="badge badge--success">Active</span></dd></div><div><dt>Wallet balance</dt><dd><span class="amount">RM 68.40</span></dd></div><div><dt>Trips completed</dt><dd>214</dd></div></dl></div><div class="card__foot"><span>Linked account</span><a class="card__link" href="passenger-dashboard.html">Open dashboard →</a></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Where this ticket is used</h2></div></div><div class="card__body">
+      <p class="hint">The same ticket references are carried into the media processing and
+      gate control modules, so the demonstration can be followed end to end.</p>
+      <div class="btn-row mt-2">
+        <a class="btn btn--outline btn--sm" href="media-processing.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M20 8V5a1 1 0 0 0-1-1h-3M4 16v3a1 1 0 0 0 1 1h3M20 16v3a1 1 0 0 1-1 1h-3"/><path d="M4 12h16"/></svg> Validate</a>
+        <a class="btn btn--outline btn--sm" href="gate-control.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v16"/><path d="M12 8h5l2 4-2 4h-5"/><path d="M2 21h20"/><path d="M8 8v2"/></svg> Gate control</a>
+      </div></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Sample expired ticket</h2></div></div><div class="card__body"><dl class="kv "><div><dt>Ticket ID</dt><dd class="mono">TKT-2026-771034</dd></div><div><dt>Ticket type</dt><dd>Student Concession · 30 Day</dd></div><div><dt>Validity</dt><dd>01 Oct 2026 – 31 Oct 2026</dd></div><div><dt>Status</dt><dd><span class="badge badge--danger">Expired</span></dd></div></dl><p class="hint mt-2">Used on the validation page to demonstrate the rejected state.</p></div></section>
+  </div>
+</div>
+  </main>
+  <footer class="footer">
+    <span>© 2026 AFC System · Rangkaian Transit Nasional — front-end prototype. All records are fictional sample data.</span>
+    <span class="footer__links"><a href="../pages/passenger-dashboard.html">Passenger Portal</a><a href="../pages/media-processing.html">Media Processing</a><a href="../pages/gate-control.html">Gate Control</a><a href="../pages/fare-management.html">Fare Management</a><a href="../pages/clearing-house.html">Clearing House</a><a href="../index.html">Home</a></span>
+  </footer>
+  </div>
+</div>
+</body>
+</html>

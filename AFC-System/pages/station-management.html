@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Station Management · AFC System</title>
+<meta name="description" content="Automated Fare Collection & Access Control System — front-end prototype for Rangkaian Transit Nasional. Static demonstration data only.">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar__top">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Z"/><path d="M4 10h16M9 13h.01M15 13h.01"/><path d="m7 17-2 4M17 17l2 4"/></svg></span>
+        <span>
+          <span class="brand__name">AFC System</span>
+          <span class="brand__sub">Fare Management</span>
+        </span>
+      </a>
+    </div>
+    <div class="sidebar__rule"></div>
+    <div class="nav-group">
+      <span class="nav-group__label">Fare Management</span>
+      <nav class="nav" aria-label="Fare Management navigation">
+        <li><a href="fare-management.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Dashboard</span></a></li>
+        <li><a href="station-management.html" class="is-active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg><span>Station Management</span></a></li>
+        <li><a href="fare-management.html#fare-rules"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2Z"/><path d="M9 8h6M9 12h6"/></svg><span>Fare Management</span></a></li>
+        <li><a href="fare-calculation.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h4"/></svg><span>Fare Calculation</span></a></li>
+        <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 17l-5-5 5-5"/><path d="M5 12h11"/></svg><span>Logout</span></a></li>
+      </nav>
+    </div>
+    <div class="sidebar__foot">
+      <details class="module-switch">
+        <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg> Switch module <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <ul>
+        <li><a href="../pages/passenger-dashboard.html">Passenger Portal<span class="sr-only"> — Aizat</span></a></li><li><a href="../pages/media-processing.html">Media Processing<span class="sr-only"> — Mirul</span></a></li><li><a href="../pages/gate-control.html">Gate Control<span class="sr-only"> — Gate Control</span></a></li><li><a href="../pages/fare-management.html" style="color:#7fd8cb;font-weight:600">Fare Management<span class="sr-only"> — Ile</span></a></li><li><a href="../pages/clearing-house.html">Clearing House<span class="sr-only"> — Harith Hakim</span></a></li><li><a href="../index.html">Prototype home</a></li>
+        </ul>
+      </details>
+      <div class="sidebar__meta"><span class="dot"></span> Static prototype · v1.0</div>
+    </div>
+  </aside>
+  <div class="main" id="main">
+  <header class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="crumbs__sep" aria-hidden="true">/</span><a href="fare-management.html">Fare Management</a><span class="crumbs__sep" aria-hidden="true">/</span><span class="crumbs__current" aria-current="page">Station Management</span>
+    </nav>
+    <div class="topbar__meta">
+      <span class="pill pill--demo" title="This build is a static front-end prototype">
+        <span class="pill__dot" aria-hidden="true"></span><span class="pill__text">Demo data</span>
+      </span>
+      <span class="pill topbar__clock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>23 Nov 2026 · 09:42 MYT</span>
+      <div class="user">
+        <span class="avatar avatar--teal" aria-hidden="true">IN</span>
+        <span class="user__text">
+          <span class="user__name">Ile Nazira</span>
+          <span class="user__role">Fare Management Administrator</span>
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="content" id="main">
+    <div class="page-head">
+      <div>
+        <p class="eyebrow">Member 4 · Fare Management</p>
+        <h1 class="page-title">Station Management</h1>
+        <p class="page-sub">The station register that every fare rule, gate device and fare calculation refers to.</p>
+      </div>
+      <div class="page-actions"><a class="btn btn--primary" href="#main"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Add station</a></div>
+    </div>
+    <div class="grid grid--metrics">
+  <div class="metric metric--navy"><p class="metric__label">Stations configured</p><p class="metric__value">10</p><p class="metric__foot">Across 3 lines</p></div>
+  <div class="metric metric--ok"><p class="metric__label">Active stations</p><p class="metric__value">9</p><p class="metric__foot">1 in maintenance</p></div>
+  <div class="metric "><p class="metric__label">Interchanges</p><p class="metric__value">4</p><p class="metric__foot">KL Sentral, Subang Jaya, Sungai Buloh, BTS</p></div>
+  <div class="metric "><p class="metric__label">Average daily entries</p><p class="metric__value">9,480</p><p class="metric__foot">Per station · weekday</p></div>
+</div>
+
+<div class="grid grid--aside mt-2">
+  <div class="stack">
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Add a station</h2><p class="card__sub">Register a new stop on the network. Station codes must be unique.</p></div></div><div class="card__body">
+      <form action="station-management.html" method="get">
+        <div class="form-grid">
+          <div class="field"><label for="n-sid">Station ID<span class="req" aria-hidden="true">*</span></label><input class="input" type="text" id="n-sid" name="station_id" placeholder="STN-KL11"><p class="hint">Format: STN-&lt;line&gt;&lt;number&gt;.</p></div>
+          <div class="field"><label for="n-name">Station name<span class="req" aria-hidden="true">*</span></label><input class="input" type="text" id="n-name" name="station_name" placeholder="e.g. Bukit Bintang"><p class="hint">Official name shown on signage.</p></div>
+          <div class="field"><label for="n-code">Station code<span class="req" aria-hidden="true">*</span></label><input class="input" type="text" id="n-code" name="station_code" placeholder="BBT"><p class="hint">Three-letter code used on tickets.</p></div>
+          <div class="field"><label for="n-type">Station type</label><select class="select" id="n-type"><option>Surface</option><option>Underground</option><option>Interchange</option><option>Terminal</option></select><p class="hint">Determines gate and platform layout.</p></div>
+          <div class="field field--full"><label for="n-loc">Station location<span class="req" aria-hidden="true">*</span></label><input class="input" type="text" id="n-loc" name="location" placeholder="Jalan Bukit Bintang, Kuala Lumpur"><p class="hint">Street address or landmark.</p></div>
+          <div class="field"><label for="n-status">Station status</label><select class="select" id="n-status"><option>Active</option><option>Maintenance</option><option>Closed</option></select><p class="hint">Only active stations are selectable at gates.</p></div>
+          <div class="field"><label for="n-gates">Number of gates</label><input class="input" type="number" id="n-gates" name="gates" value="6" placeholder="6" min="1" max="40"><p class="hint">Barrier count to provision.</p></div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn--primary" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Save station</button>
+          <button class="btn btn--outline" type="reset">Clear form</button>
+          <span class="demo-tag">Not persisted</span>
+        </div>
+      </form></div><div class="card__foot"><span>Adding a station also creates gate devices and default fare rules.</span><span>10 stations</span></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Station listing</h2><p class="card__sub">All stations on the network, ordered by line position.</p></div></div><div class="card__body card__body--tight"><div class="table-wrap"><table class="table " style="min-width:820px"><thead><tr><th>Station ID</th><th>Station name</th><th>Code</th><th>Location</th><th>Status</th><th></th></tr></thead><tbody><tr><td><span class="cell-id">STN-KL01</span></td><td class="cell-strong">KL Sentral<span class="cell-sub">Interchange</span></td><td><span class="mono">KLS</span></td><td class="cell-muted">Brickfields, Kuala Lumpur</td><td><span class="badge badge--success">Active</span></td><td class="cell-muted num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">STN-KL02</span></td><td class="cell-strong">KLCC<span class="cell-sub">Underground</span></td><td><span class="mono">KLC</span></td><td class="cell-muted">Jalan Ampang, Kuala Lumpur</td><td><span class="badge badge--success">Active</span></td><td class="cell-muted num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">STN-PJ03</span></td><td class="cell-strong">Petaling Jaya<span class="cell-sub">Surface</span></td><td><span class="mono">PJY</span></td><td class="cell-muted">Jalan Utara, Selangor</td><td><span class="badge badge--success">Active</span></td><td class="cell-muted num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">STN-SJ04</span></td><td class="cell-strong">Subang Jaya<span class="cell-sub">Interchange</span></td><td><span class="mono">SBJ</span></td><td class="cell-muted">Jalan SS 15, Selangor</td><td><span class="badge badge--success">Active</span></td><td class="cell-muted num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">STN-SA05</span></td><td class="cell-strong">Shah Alam<span class="cell-sub">Surface</span></td><td><span class="mono">SA2</span></td><td class="cell-muted">Seksyen 7, Selangor</td><td><span class="badge badge--success">Active</span></td><td class="cell-muted num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">STN-KG06</span></td><td class="cell-strong">Klang<span class="cell-sub">Terminal</span></td><td><span class="mono">KLG</span></td><td class="cell-muted">Jalan Besar, Selangor</td><td><span class="badge badge--success">Active</span></td><td class="cell-muted num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">STN-SB07</span></td><td class="cell-strong">Sungai Buloh<span class="cell-sub">Interchange</span></td><td><span class="mono">SGB</span></td><td class="cell-muted">Jalan Kuala Selangor, Selangor</td><td><span class="badge badge--success">Active</span></td><td class="cell-muted num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">STN-BT08</span></td><td class="cell-strong">Bandar Tasik Selatan<span class="cell-sub">Interchange</span></td><td><span class="mono">BTS</span></td><td class="cell-muted">Jalan Tasik Selatan, Kuala Lumpur</td><td><span class="badge badge--success">Active</span></td><td class="cell-muted num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">STN-KP09</span></td><td class="cell-strong">Kepong Sentral<span class="cell-sub">Surface</span></td><td><span class="mono">KPS</span></td><td class="cell-muted">Jalan Kepong, Kuala Lumpur</td><td><span class="badge badge--warning">Maintenance</span></td><td class="cell-muted num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">STN-TM10</span></td><td class="cell-strong">Tanjung Malim<span class="cell-sub">Terminal</span></td><td><span class="mono">TGM</span></td><td class="cell-muted">Jalan Stesen, Perak</td><td><span class="badge badge--success">Active</span></td><td class="cell-muted num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr></tbody></table></div></div><div class="card__foot"><span>Showing 10 of 10 stations</span><span>Last edited: 20 Nov 2026 · Ile</span></div></section>
+  </div>
+
+  <div class="stack">
+    <section class="card metric--teal"><div class="card__head"><div><h2 class="card__title">Network composition</h2></div></div><div class="card__body"><dl class="kv "><div><dt>Total stations</dt><dd>10</dd></div><div><dt>Interchanges</dt><dd>4</dd></div><div><dt>Terminals</dt><dd>2</dd></div><div><dt>Underground</dt><dd>1</dd></div><div><dt>Maintenance</dt><dd>1</dd></div><div><dt>Longest segment</dt><dd>74.5 km</dd></div><div><dt>Shortest segment</dt><dd>6.4 km</dd></div></dl></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Network route diagram</h2><p class="card__sub">Three lines · four interchanges</p></div></div><div class="card__body"><img class="cardart" src="../assets/images/network-map.svg" width="800" height="500" alt="Schematic route diagram of three transit lines — Komuter, Intercity and LRT — crossing at KL Sentral interchange."><p class="hint mt-2">Schematic only — interchanges at KL Sentral, Subang Jaya, Sungai Buloh and Bandar Tasik Selatan.</p></div><div class="card__foot"><a class="card__link" href="fare-management.html">Fare rules by distance →</a></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Station codes in use</h2></div></div><div class="card__body">
+      <div class="inline-list">
+        <span class="media-chip"><span class="mono">KLS</span> KL</span><span class="media-chip"><span class="mono">KLC</span> KLCC</span><span class="media-chip"><span class="mono">PJY</span> Petaling</span><span class="media-chip"><span class="mono">SBJ</span> Subang</span><span class="media-chip"><span class="mono">SA2</span> Shah</span><span class="media-chip"><span class="mono">KLG</span> Klang</span><span class="media-chip"><span class="mono">SGB</span> Sungai</span><span class="media-chip"><span class="mono">BTS</span> Bandar</span>
+      </div>
+      <p class="hint mt-2">Codes appear on printed tickets, gate displays and fare records.</p></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Maintenance window</h2></div></div><div class="card__body">
+      <div class="inline-list" style="justify-content:space-between">
+        <span class="cell-strong">Kepong Sentral</span><span class="badge badge--warning">Maintenance</span>
+      </div>
+      <p class="hint mt-2">Platform resurfacing · 18 Nov – 30 Nov 2026. Trains pass without stopping;
+        gates are powered down and no fares are collected at this station.</p>
+      <div class="btn-row mt-2">
+        <button class="btn btn--outline btn--sm" type="button">View schedule</button>
+        <a class="btn btn--ghost btn--sm" href="fare-management.html">Fare rules →</a>
+      </div></div></section>
+
+    <div class="alert alert--info"><svg class="alert__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg><div><strong>Demonstration only</strong> Stations added here are not saved. This form demonstrates the interface only — no record is created.</div></div>
+  </div>
+</div>
+  </main>
+  <footer class="footer">
+    <span>© 2026 AFC System · Rangkaian Transit Nasional — front-end prototype. All records are fictional sample data.</span>
+    <span class="footer__links"><a href="../pages/passenger-dashboard.html">Passenger Portal</a><a href="../pages/media-processing.html">Media Processing</a><a href="../pages/gate-control.html">Gate Control</a><a href="../pages/fare-management.html">Fare Management</a><a href="../pages/clearing-house.html">Clearing House</a><a href="../index.html">Home</a></span>
+  </footer>
+  </div>
+</div>
+</body>
+</html>

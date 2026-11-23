@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Settlement Reconciliation · AFC System</title>
+<meta name="description" content="Automated Fare Collection & Access Control System — front-end prototype for Rangkaian Transit Nasional. Static demonstration data only.">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar__top">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Z"/><path d="M4 10h16M9 13h.01M15 13h.01"/><path d="m7 17-2 4M17 17l2 4"/></svg></span>
+        <span>
+          <span class="brand__name">AFC System</span>
+          <span class="brand__sub">Clearing House</span>
+        </span>
+      </a>
+    </div>
+    <div class="sidebar__rule"></div>
+    <div class="nav-group">
+      <span class="nav-group__label">Clearing House</span>
+      <nav class="nav" aria-label="Clearing House navigation">
+        <li><a href="clearing-house.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Dashboard</span></a></li>
+        <li><a href="transactions.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg><span>Transactions</span></a></li>
+        <li><a href="clearing-house.html#operator-summary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v15"/><path d="M14 10h4a2 2 0 0 1 2 2v9"/><path d="M2 21h20M8 8h2M8 12h2M8 16h2"/></svg><span>Operator Summary</span></a></li>
+        <li><a href="reconciliation.html" class="is-active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10"/><path d="m5 8 4 6H1l4-6Z"/><path d="m19 8 4 6h-8l4-6Z"/><path d="M5 8h14"/></svg><span>Settlement Reconciliation</span></a></li>
+        <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 17l-5-5 5-5"/><path d="M5 12h11"/></svg><span>Logout</span></a></li>
+      </nav>
+    </div>
+    <div class="sidebar__foot">
+      <details class="module-switch">
+        <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg> Switch module <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <ul>
+        <li><a href="../pages/passenger-dashboard.html">Passenger Portal<span class="sr-only"> — Aizat</span></a></li><li><a href="../pages/media-processing.html">Media Processing<span class="sr-only"> — Mirul</span></a></li><li><a href="../pages/gate-control.html">Gate Control<span class="sr-only"> — Gate Control</span></a></li><li><a href="../pages/fare-management.html">Fare Management<span class="sr-only"> — Ile</span></a></li><li><a href="../pages/clearing-house.html" style="color:#7fd8cb;font-weight:600">Clearing House<span class="sr-only"> — Harith Hakim</span></a></li><li><a href="../index.html">Prototype home</a></li>
+        </ul>
+      </details>
+      <div class="sidebar__meta"><span class="dot"></span> Static prototype · v1.0</div>
+    </div>
+  </aside>
+  <div class="main" id="main">
+  <header class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="crumbs__sep" aria-hidden="true">/</span><a href="clearing-house.html">Clearing House</a><span class="crumbs__sep" aria-hidden="true">/</span><span class="crumbs__current" aria-current="page">Settlement Reconciliation</span>
+    </nav>
+    <div class="topbar__meta">
+      <span class="pill pill--demo" title="This build is a static front-end prototype">
+        <span class="pill__dot" aria-hidden="true"></span><span class="pill__text">Demo data</span>
+      </span>
+      <span class="pill topbar__clock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>23 Nov 2026 · 09:42 MYT</span>
+      <div class="user">
+        <span class="avatar avatar--teal" aria-hidden="true">HH</span>
+        <span class="user__text">
+          <span class="user__name">Harith Hakim</span>
+          <span class="user__role">Clearing House Administrator</span>
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="content" id="main">
+    <div class="page-head">
+      <div>
+        <p class="eyebrow">Member 5 · Central Clearing House <span class="eyebrow__sep">/</span> <span class="eyebrow__muted">Cut-off 23 Nov 2026</span></p>
+        <h1 class="page-title">Settlement Reconciliation</h1>
+        <p class="page-sub">Compare the system's daily transaction totals against simulated external settlement records.</p>
+      </div>
+      <div class="page-actions"><a class="btn btn--outline" href="transactions.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg> Transactions</a><a class="btn btn--primary" href="clearing-house.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg> Dashboard</a></div>
+    </div>
+    <div class="grid grid--metrics">
+  <div class="metric metric--navy"><p class="metric__label">Operators compared</p><p class="metric__value">4</p><p class="metric__foot">Cut-off 23 Nov 2026</p></div>
+  <div class="metric metric--ok"><p class="metric__label">Matched</p><p class="metric__value">2</p><p class="metric__foot">Difference RM 0.00</p></div>
+  <div class="metric metric--bad"><p class="metric__label">Discrepancies</p><p class="metric__value">2</p><p class="metric__foot">Requires review</p></div>
+  <div class="metric metric--teal"><p class="metric__label">Net difference</p><p class="metric__value">RM 6.50</p><p class="metric__foot">System above settlement</p></div>
+</div>
+
+<div class="grid grid--2 mt-2">
+  <section class="card" style="align-self:start">
+    <div class="card__head">
+      <div>
+        <h2 class="card__title">System transaction records</h2>
+        <p class="card__sub">Totals derived from gate transactions.</p>
+      </div>
+      <span class="compare-head compare-head--system"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 20V10M10 20V4M16 20v-7M22 20H2"/></svg> System</span>
+    </div>
+    <div class="card__body card__body--tight">
+      <div class="table-wrap"><table class="table " style="min-width:440px"><thead><tr><th>Operator name</th><th class="num">System collection</th><th class="num">Transactions</th></tr></thead><tbody><tr><td class="cell-strong">Rangkaian Transit Nasional<span class="cell-sub">OPR-01</span></td><td class="num"><span class="amount">RM 7,842.60</span></td><td class="num cell-muted">1,284</td></tr><tr><td class="cell-strong">Ekspres Rail Malaysia<span class="cell-sub">OPR-02</span></td><td class="num"><span class="amount">RM 4,318.40</span></td><td class="num cell-muted">412</td></tr><tr><td class="cell-strong">Metro Lintas Bandar<span class="cell-sub">OPR-03</span></td><td class="num"><span class="amount">RM 4,899.80</span></td><td class="num cell-muted">861</td></tr><tr><td class="cell-strong">Transit Aliran Ringan<span class="cell-sub">OPR-04</span></td><td class="num"><span class="amount">RM 1,395.00</span></td><td class="num cell-muted">290</td></tr></tbody><tfoot><tr><td>Total</td><td class="num">RM 18,462.30</td><td class="num">2,847</td></tr></tfoot></table></div>
+    </div>
+    <div class="card__foot"><span>Aggregated 23 Nov 2026 · 23:59</span><span>Source: fare transaction register</span></div>
+  </section>
+
+  <section class="card" style="align-self:start">
+    <div class="card__head">
+      <div>
+        <h2 class="card__title">External settlement records</h2>
+        <p class="card__sub">Simulated bank and operator statements.</p>
+      </div>
+      <span class="compare-head compare-head--external"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v15"/><path d="M14 10h4a2 2 0 0 1 2 2v9"/><path d="M2 21h20M8 8h2M8 12h2M8 16h2"/></svg> External</span>
+    </div>
+    <div class="card__body card__body--tight">
+      <div class="table-wrap"><table class="table " style="min-width:440px"><thead><tr><th>Operator name</th><th class="num">Settlement amount</th><th>Settlement date</th></tr></thead><tbody><tr><td class="cell-strong">Rangkaian Transit Nasional<span class="cell-sub">STL-20261123-RTN</span></td><td class="num"><span class="amount">RM 7,842.60</span></td><td class="cell-muted nowrap">23 Nov 2026</td></tr><tr><td class="cell-strong">Ekspres Rail Malaysia<span class="cell-sub">STL-20261123-ERM</span></td><td class="num"><span class="amount">RM 4,318.40</span></td><td class="cell-muted nowrap">23 Nov 2026</td></tr><tr><td class="cell-strong">Metro Lintas Bandar<span class="cell-sub">STL-20261123-MLB</span></td><td class="num"><span class="amount">RM 4,905.30</span></td><td class="cell-muted nowrap">23 Nov 2026</td></tr><tr><td class="cell-strong">Transit Aliran Ringan<span class="cell-sub">STL-20261123-TAR</span></td><td class="num"><span class="amount">RM 1,396.00</span></td><td class="cell-muted nowrap">23 Nov 2026</td></tr></tbody><tfoot><tr><td>Total</td><td class="num">RM 18,455.80</td><td></td></tr></tfoot></table></div>
+    </div>
+    <div class="card__foot"><span>Received 23 Nov 2026 · 09:00</span><span>Reference STL-20261123-*</span></div>
+  </section>
+</div>
+
+<div class="card mt-2">
+  <div class="card__head">
+    <div>
+      <h2 class="card__title">Reconciliation results</h2>
+      <p class="card__sub">System collection compared against each external settlement record.</p>
+    </div>
+    <span class="pill pill--demo"><span class="pill__dot"></span>2 of 4 unresolved</span>
+  </div>
+
+  <div class="recon">
+    <div class="recon__head">
+      <span>Operator / settlement reference</span>
+      <span class="num" style="text-align:right">System amount</span>
+      <span class="num" style="text-align:right">Settlement amount</span>
+    </div>
+    
+      <div class="recon__row recon__row--match">
+        <div class="recon__op"><span>Rangkaian Transit Nasional<small>STL-20261123-RTN</small></span></div>
+        <div class="num"><span class="amount">RM 7,842.60</span></div>
+        <div class="num"><span class="amount">RM 7,842.60</span></div>
+      </div>
+      <div class="recon__row recon__row--match" style="border-top:0;padding-top:0">
+        <div style="padding-top:0">
+          <span class="recon-badge recon-badge--match">
+            MATCHED</span>
+        </div>
+        <div class="num" style="padding-top:0"><span class="mini-label">Difference</span><br>
+          <span class="diff-zero">RM 0.00</span></div>
+        <div class="num" style="padding-top:0"><span class="mini-label">Reconciliation</span><br>
+          <span class="diff-zero">Matched</span></div>
+      </div>
+      <div class="recon__row recon__row--match">
+        <div class="recon__op"><span>Ekspres Rail Malaysia<small>STL-20261123-ERM</small></span></div>
+        <div class="num"><span class="amount">RM 4,318.40</span></div>
+        <div class="num"><span class="amount">RM 4,318.40</span></div>
+      </div>
+      <div class="recon__row recon__row--match" style="border-top:0;padding-top:0">
+        <div style="padding-top:0">
+          <span class="recon-badge recon-badge--match">
+            MATCHED</span>
+        </div>
+        <div class="num" style="padding-top:0"><span class="mini-label">Difference</span><br>
+          <span class="diff-zero">RM 0.00</span></div>
+        <div class="num" style="padding-top:0"><span class="mini-label">Reconciliation</span><br>
+          <span class="diff-zero">Matched</span></div>
+      </div>
+      <div class="recon__row recon__row--diff">
+        <div class="recon__op"><span>Metro Lintas Bandar<small>STL-20261123-MLB</small></span></div>
+        <div class="num"><span class="amount">RM 4,899.80</span></div>
+        <div class="num"><span class="amount">RM 4,905.30</span></div>
+      </div>
+      <div class="recon__row recon__row--diff" style="border-top:0;padding-top:0">
+        <div style="padding-top:0">
+          <span class="recon-badge recon-badge--diff">
+            DISCREPANCY</span>
+        </div>
+        <div class="num" style="padding-top:0"><span class="mini-label">Difference</span><br>
+          <span class="diff-pos">RM 5.50</span></div>
+        <div class="num" style="padding-top:0"><span class="mini-label">Reconciliation</span><br>
+          <span class="diff-pos">Discrepancy</span></div>
+      </div>
+      <div class="recon__row recon__row--diff">
+        <div class="recon__op"><span>Transit Aliran Ringan<small>STL-20261123-TAR</small></span></div>
+        <div class="num"><span class="amount">RM 1,395.00</span></div>
+        <div class="num"><span class="amount">RM 1,396.00</span></div>
+      </div>
+      <div class="recon__row recon__row--diff" style="border-top:0;padding-top:0">
+        <div style="padding-top:0">
+          <span class="recon-badge recon-badge--diff">
+            DISCREPANCY</span>
+        </div>
+        <div class="num" style="padding-top:0"><span class="mini-label">Difference</span><br>
+          <span class="diff-pos">RM 1.00</span></div>
+        <div class="num" style="padding-top:0"><span class="mini-label">Reconciliation</span><br>
+          <span class="diff-pos">Discrepancy</span></div>
+      </div>
+    <div class="recon__row recon__row--total">
+      <div>All operators · net position</div>
+      <div class="num"><span class="amount">RM 18,462.30</span></div>
+      <div class="num"><span class="amount">RM 18,455.80</span></div>
+    </div>
+  </div>
+
+  <div class="card__foot">
+    <span>Net difference <strong>RM 6.50</strong> — system collection exceeds settlement received.</span>
+    <span><a class="card__link" href="#discrepancies">Review discrepancies →</a></span>
+  </div>
+</div>
+
+<div class="grid grid--2 mt-2" id="discrepancies">
+  <article class="result-card result-card--valid">
+    <div class="result-card__band"><span>Outcome A</span><span>Reconciled</span></div>
+    <div class="result-card__body">
+      <div class="verdict verdict--valid">
+        <span class="verdict__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg></span>
+        <div>
+          <p class="verdict__label">Reconciliation status</p>
+          <p class="verdict__status">MATCHED</p>
+          <p class="verdict__msg">System total equals settlement received</p>
+        </div>
+      </div>
+      <dl class="kv mt-2">
+        <div><dt>Operator</dt><dd>Rangkaian Transit Nasional</dd></div>
+        <div><dt>Settlement reference</dt><dd class="mono">STL-20261123-RTN</dd></div>
+        <div><dt>System amount</dt><dd>RM 7,842.60</dd></div>
+        <div><dt>Settlement amount</dt><dd>RM 7,842.60</dd></div>
+        <div><dt>Difference</dt><dd>RM 0.00</dd></div>
+        <div><dt>Reconciliation status</dt><dd><span class="badge badge--success">Matched</span></dd></div>
+      </dl>
+    </div>
+  </article>
+
+  <article class="result-card result-card--invalid">
+    <div class="result-card__band"><span>Outcome B</span><span>Requires review</span></div>
+    <div class="result-card__body">
+      <div class="verdict verdict--warn">
+        <span class="verdict__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19L12 3Z"/><path d="M12 9v4M12 17h.01"/></svg></span>
+        <div>
+          <p class="verdict__label">Reconciliation status</p>
+          <p class="verdict__status">DISCREPANCY FOUND</p>
+          <p class="verdict__msg">System collection exceeds settlement by RM 5.50</p>
+        </div>
+      </div>
+      <dl class="kv mt-2">
+        <div><dt>Operator</dt><dd>Metro Lintas Bandar</dd></div>
+        <div><dt>Settlement reference</dt><dd class="mono">STL-20261123-MLB</dd></div>
+        <div><dt>System amount</dt><dd>RM 4,905.30</dd></div>
+        <div><dt>Settlement amount</dt><dd>RM 4,899.80</dd></div>
+        <div><dt>Difference</dt><dd class="diff-pos">RM 5.50</dd></div>
+        <div><dt>Reconciliation status</dt><dd><span class="badge badge--warning">Discrepancy</span></dd></div>
+      </dl>
+    </div>
+  </article>
+</div>
+
+<div class="card mt-2">
+  <div class="card__head">
+    <div>
+      <h2 class="card__title">Discrepancy register</h2>
+      <p class="card__sub">Differences requiring a settlement adjustment or operator query.</p>
+    </div>
+    <button class="btn btn--outline btn--sm" type="button" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5"/><path d="M4 20h16"/></svg> Export report</button>
+  </div>
+  <div class="table-wrap"><table class="table " style="min-width:900px"><thead><tr><th>Operator</th><th>Settlement reference</th><th class="num">System amount</th><th class="num">Settlement amount</th><th class="num">Difference</th><th>Status</th><th>Action</th></tr></thead><tbody><tr><td class="cell-strong">Rangkaian Transit Nasional</td><td class="cell-id">STL-20261123-RTN</td><td class="num"><span class="amount">RM 7,842.60</span></td><td class="num"><span class="amount">RM 7,842.60</span></td><td class="num diff-zero">RM 0.00</td><td><span class="badge badge--success">Matched</span></td><td class="cell-muted">No action</td></tr><tr><td class="cell-strong">Ekspres Rail Malaysia</td><td class="cell-id">STL-20261123-ERM</td><td class="num"><span class="amount">RM 4,318.40</span></td><td class="num"><span class="amount">RM 4,318.40</span></td><td class="num diff-zero">RM 0.00</td><td><span class="badge badge--success">Matched</span></td><td class="cell-muted">No action</td></tr><tr><td class="cell-strong">Metro Lintas Bandar</td><td class="cell-id">STL-20261123-MLB</td><td class="num"><span class="amount">RM 4,899.80</span></td><td class="num"><span class="amount">RM 4,905.30</span></td><td class="num diff-pos">RM 5.50</td><td><span class="badge badge--warning">Discrepancy</span></td><td class="cell-muted">Raise query</td></tr><tr><td class="cell-strong">Transit Aliran Ringan</td><td class="cell-id">STL-20261123-TAR</td><td class="num"><span class="amount">RM 1,395.00</span></td><td class="num"><span class="amount">RM 1,396.00</span></td><td class="num diff-pos">RM 1.00</td><td><span class="badge badge--warning">Discrepancy</span></td><td class="cell-muted">Raise query</td></tr></tbody></table></div>
+  <div class="card__foot">
+    <span>2 discrepancies · total value RM 6.50</span>
+    <span><span class="demo-tag">No comparison logic is applied</span></span>
+  </div>
+</div>
+
+<p class="panel-note mt-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>Reconciliation on this page compares fixed sample
+records. No financial comparison, adjustment or payment instruction is executed by the prototype.</p>
+  </main>
+  <footer class="footer">
+    <span>© 2026 AFC System · Rangkaian Transit Nasional — front-end prototype. All records are fictional sample data.</span>
+    <span class="footer__links"><a href="../pages/passenger-dashboard.html">Passenger Portal</a><a href="../pages/media-processing.html">Media Processing</a><a href="../pages/gate-control.html">Gate Control</a><a href="../pages/fare-management.html">Fare Management</a><a href="../pages/clearing-house.html">Clearing House</a><a href="../index.html">Home</a></span>
+  </footer>
+  </div>
+</div>
+</body>
+</html>

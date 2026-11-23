@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 320" width="640" height="320" role="img" aria-labelledby="t d">
+  <title id="t">Fare collection flow</title>
+  <desc id="d">Five-stage diagram: registration, media validation, gate decision, fare settlement and clearing reconciliation.</desc>
+
+  <defs>
+    <marker id="ar" markerWidth="9" markerHeight="9" refX="7" refY="4.5" orient="auto">
+      <path d="M0 0l8 4.5L0 9Z" fill="#cbd5e1"/>
+    </marker>
+    <style>
+      .ft { font-family:"Segoe UI",Arial,sans-serif; font-size:11.5px; font-weight:700; fill:#142b45; }
+      .fs { font-family:"Segoe UI",Arial,sans-serif; font-size:9.5px; font-weight:500; fill:#5a6b80; }
+      .fn { font-family:Consolas,monospace; font-size:9px; font-weight:600; fill:#0f766e; }
+      .fh { font-family:"Segoe UI",Arial,sans-serif; font-size:13px; font-weight:700; fill:#142b45; }
+    </style>
+  </defs>
+
+  <rect width="640" height="320" fill="#ffffff"/>
+
+  <text class="fh" x="32" y="40">Fare collection — end-to-end flow</text>
+  <text class="fs" x="32" y="58">One journey moves through all five modules of the prototype.</text>
+
+  <!-- Connector -->
+  <path d="M84 152H556" stroke="#cbd5e1" stroke-width="2" marker-end="url(#ar)"/>
+
+  <!-- Stage nodes -->
+  <g>
+    <!-- 1 -->
+    <circle cx="84" cy="152" r="26" fill="#e6f4f1" stroke="#0f766e" stroke-width="2"/>
+    <text class="fn" x="84" y="156" text-anchor="middle">01</text>
+    <text class="ft" x="84" y="200" text-anchor="middle">Register</text>
+    <text class="fs" x="84" y="216" text-anchor="middle">Passenger &amp; wallet</text>
+
+    <!-- 2 -->
+    <circle cx="202" cy="152" r="26" fill="#e6f4f1" stroke="#0f766e" stroke-width="2"/>
+    <text class="fn" x="202" y="156" text-anchor="middle">02</text>
+    <text class="ft" x="202" y="200" text-anchor="middle">Validate</text>
+    <text class="fs" x="202" y="216" text-anchor="middle">NFC · QR · barcode</text>
+
+    <!-- 3 -->
+    <circle cx="320" cy="152" r="26" fill="#e6f4f1" stroke="#0f766e" stroke-width="2"/>
+    <text class="fn" x="320" y="156" text-anchor="middle">03</text>
+    <text class="ft" x="320" y="200" text-anchor="middle">Gate decision</text>
+    <text class="fs" x="320" y="216" text-anchor="middle">Open or deny</text>
+
+    <!-- 4 -->
+    <circle cx="438" cy="152" r="26" fill="#e6f4f1" stroke="#0f766e" stroke-width="2"/>
+    <text class="fn" x="438" y="156" text-anchor="middle">04</text>
+    <text class="ft" x="438" y="200" text-anchor="middle">Fare settled</text>
+    <text class="fs" x="438" y="216" text-anchor="middle">Distance-based</text>
+
+    <!-- 5 -->
+    <circle cx="556" cy="152" r="26" fill="#142b45" stroke="#142b45" stroke-width="2"/>
+    <text class="fn" x="556" y="156" text-anchor="middle" fill="#7fd8cb">05</text>
+    <text class="ft" x="556" y="200" text-anchor="middle">Reconcile</text>
+    <text class="fs" x="556" y="216" text-anchor="middle">Clearing house</text>
+  </g>
+
+  <!-- Module owners -->
+  <g opacity=".85">
+    <text class="fn" x="84" y="248" text-anchor="middle">M1 · Aizat</text>
+    <text class="fn" x="202" y="248" text-anchor="middle">M2 · Mirul</text>
+    <text class="fn" x="320" y="248" text-anchor="middle">M3 · Gate</text>
+    <text class="fn" x="438" y="248" text-anchor="middle">M4 · Ile</text>
+    <text class="fn" x="556" y="248" text-anchor="middle">M5 · Harith</text>
+  </g>
+
+  <!-- Sample trace -->
+  <rect x="32" y="270" width="576" height="30" rx="6" fill="#f8fafc" stroke="#e2e8f0"/>
+  <circle cx="50" cy="285" r="4" fill="#0f766e"/>
+  <text class="fs" x="62" y="289">Sample trace: PSG-2026-004178 → TKT-2026-884120 → GATE-A03 → RM 2.60 → STL-20261123-RTN</text>
+</svg>

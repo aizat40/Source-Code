@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gate Control · AFC System</title>
+<meta name="description" content="Automated Fare Collection & Access Control System — front-end prototype for Rangkaian Transit Nasional. Static demonstration data only.">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar__top">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Z"/><path d="M4 10h16M9 13h.01M15 13h.01"/><path d="m7 17-2 4M17 17l2 4"/></svg></span>
+        <span>
+          <span class="brand__name">AFC System</span>
+          <span class="brand__sub">Gate Control</span>
+        </span>
+      </a>
+    </div>
+    <div class="sidebar__rule"></div>
+    <div class="nav-group">
+      <span class="nav-group__label">Gate Control</span>
+      <nav class="nav" aria-label="Gate Control navigation">
+        <li><a href="gate-control.html" class="is-active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Dashboard</span></a></li>
+        <li><a href="gate-control.html#gate-panel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 21V5a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v16"/><path d="M12 8h5l2 4-2 4h-5"/><path d="M2 21h20"/><path d="M8 8v2"/></svg><span>Gate Control</span></a></li>
+        <li><a href="gate-control.html#gate-activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg><span>Gate Activity</span></a></li>
+        <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 17l-5-5 5-5"/><path d="M5 12h11"/></svg><span>Logout</span></a></li>
+      </nav>
+    </div>
+    <div class="sidebar__foot">
+      <details class="module-switch">
+        <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg> Switch module <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <ul>
+        <li><a href="../pages/passenger-dashboard.html">Passenger Portal<span class="sr-only"> — Aizat</span></a></li><li><a href="../pages/media-processing.html">Media Processing<span class="sr-only"> — Mirul</span></a></li><li><a href="../pages/gate-control.html" style="color:#7fd8cb;font-weight:600">Gate Control<span class="sr-only"> — Gate Control</span></a></li><li><a href="../pages/fare-management.html">Fare Management<span class="sr-only"> — Ile</span></a></li><li><a href="../pages/clearing-house.html">Clearing House<span class="sr-only"> — Harith Hakim</span></a></li><li><a href="../index.html">Prototype home</a></li>
+        </ul>
+      </details>
+      <div class="sidebar__meta"><span class="dot"></span> Static prototype · v1.0</div>
+    </div>
+  </aside>
+  <div class="main" id="main">
+  <header class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="crumbs__sep" aria-hidden="true">/</span><a href="gate-control.html">Gate Control</a><span class="crumbs__sep" aria-hidden="true">/</span><span class="crumbs__current" aria-current="page">Dashboard</span>
+    </nav>
+    <div class="topbar__meta">
+      <span class="pill pill--demo" title="This build is a static front-end prototype">
+        <span class="pill__dot" aria-hidden="true"></span><span class="pill__text">Demo data</span>
+      </span>
+      <span class="pill topbar__clock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>23 Nov 2026 · 09:42 MYT</span>
+      <div class="user">
+        <span class="avatar avatar--teal" aria-hidden="true">FI</span>
+        <span class="user__text">
+          <span class="user__name">Faizal Idris</span>
+          <span class="user__role">Gate Control Operator</span>
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="content" id="main">
+    <div class="page-head">
+      <div>
+        <p class="eyebrow">Member 3 · Gate Control <span class="eyebrow__sep">/</span> <span class="eyebrow__muted">KL Sentral cluster</span></p>
+        <h1 class="page-title">Gate Control</h1>
+        <p class="page-sub">Monitor every entry and exit barrier, inspect gate decisions and trace each passenger event.</p>
+      </div>
+      <div class="page-actions"><a class="btn btn--outline" href="media-processing.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8V5a1 1 0 0 1 1-1h3M20 8V5a1 1 0 0 0-1-1h-3M4 16v3a1 1 0 0 0 1 1h3M20 16v3a1 1 0 0 1-1 1h-3"/><path d="M4 12h16"/></svg> Validate ticket</a><a class="btn btn--primary" href="#gate-activity"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg> Gate activity</a></div>
+    </div>
+    <div class="grid grid--metrics">
+      <div class="metric metric--navy"><p class="metric__label">Gates online</p><p class="metric__value">6 of 8</p><p class="metric__foot">2 devices need attention</p></div>
+      <div class="metric "><p class="metric__label">Entries today</p><p class="metric__value">1,412</p><p class="metric__foot">Since 05:00 · 3 stations</p></div>
+      <div class="metric "><p class="metric__label">Exits today</p><p class="metric__value">1,435</p><p class="metric__foot">23 more exits than entries</p></div>
+      <div class="metric metric--bad"><p class="metric__label">Denied today</p><p class="metric__value">86</p><p class="metric__foot">Mostly insufficient balance</p></div>
+    </div>
+
+<div class="grid grid--aside mt-2">
+  <div class="stack">
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Gate configuration</h2><p class="card__sub">Operating parameters for a single barrier device.</p></div></div><div class="card__body">
+      <form action="#gate-panel" method="get">
+        <div class="form-grid">
+          <div class="field"><label for="st-station">Station</label><select class="select" id="st-station"><option>KL Sentral</option><option>Subang Jaya</option><option>Shah Alam</option><option>KLCC</option><option>Klang</option><option>Sungai Buloh</option></select><p class="hint">Station where the gate cluster is installed.</p></div>
+          <div class="field"><label for="st-gate">Gate number</label><select class="select" id="st-gate"><option>GATE-A01</option><option>GATE-A02</option><option>GATE-A03</option><option>GATE-A04</option></select><p class="hint">Device identifier on the concourse.</p></div>
+          <div class="field"><label for="st-loc">Gate location</label><input class="input" type="text" id="st-loc" value="Concourse A" placeholder="Concourse A · Northbound"><p class="hint">Physical position for maintenance dispatch.</p></div>
+          <div class="field"><label for="st-mode">Device mode</label><select class="select" id="st-mode"><option>Entry</option><option>Exit</option><option>Entry / Exit (bi-directional)</option></select><p class="hint">Direction the barrier is configured to serve.</p></div>
+          <div class="field"><label for="st-entry">Entry mode</label><select class="select" id="st-entry"><option>NFC + QR + Barcode</option><option>NFC only</option><option>QR only</option></select><p class="hint">Media accepted on entry.</p></div>
+          <div class="field"><label for="st-exit">Exit mode</label><select class="select" id="st-exit"><option>NFC + QR + Barcode</option><option>NFC only</option><option>QR only</option></select><p class="hint">Media accepted on exit.</p></div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn--primary" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg> Apply configuration</button>
+          <button class="btn btn--outline" type="reset">Reset</button>
+          <span class="demo-tag">Not applied to hardware</span>
+        </div>
+      </form></div><div class="card__foot"><span>Changes require a gate controller restart in the live system.</span><span class="mono">CTRL-A03</span></div></section>
+
+    <div id="gate-panel">
+      <div class="card">
+  <div class="card__head">
+    <div>
+      <h2 class="card__title">Entry gate interface</h2>
+      <p class="card__sub">GATE-A03 · KL Sentral · Concourse A</p>
+    </div>
+    <span class="badge badge--success">Gate Open</span>
+  </div>
+  <div class="card__body">
+    <div class="gate-panel">
+      <div class="gate">
+  <div class="gate__head">
+    <div>
+      <p class="gate__id">GATE-A03</p>
+      <p class="gate__station">KL Sentral · Entry</p>
+    </div>
+    <span class="badge badge--success">Online</span>
+  </div>
+  <div class="lamps">
+    <span class="lamp lamp--open">Open</span>
+    <span class="lamp ">Deny</span>
+    <span class="lamp ">Standby</span>
+  </div>
+  <svg class="gate-diagram" viewBox="0 0 260 108" role="img"
+       aria-label="Barrier gate illustration — access permitted">
+    <defs>
+      <pattern id="stripes-gatea03" width="20" height="11" patternUnits="userSpaceOnUse">
+        <rect width="20" height="11" fill="#f8fafc"/>
+        <rect width="10" height="11" fill="#16a34a"/>
+      </pattern>
+      <linearGradient id="post-gatea03" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#2b5074"/><stop offset="1" stop-color="#142b45"/>
+      </linearGradient>
+    </defs>
+    <line x1="8" y1="92" x2="252" y2="92" stroke="#cbd5e1" stroke-width="1"
+          stroke-dasharray="4 4"/>
+    <rect x="18" y="80" width="34" height="12" rx="3" fill="#33506e"/>
+    <rect x="26" y="30" width="17" height="52" rx="3" fill="url(#post-gatea03)"/>
+    <circle cx="34.5" cy="42" r="5.5" fill="#16a34a"/>
+    <circle cx="34.5" cy="42" r="8.5" fill="none" stroke="#16a34a"
+            stroke-opacity="0.28" stroke-width="3"/>
+    <g transform="rotate(-58 34 74)"><rect x="34" y="68" width="150" height="11" rx="3" fill="url(#stripes-gatea03)"/><rect x="34" y="68" width="150" height="11" rx="3" fill="none" stroke="#94a3b8" stroke-width="0.6"/></g>
+    <circle cx="34" cy="74" r="4.5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+    <text x="200" y="40" text-anchor="middle" class="gate-diagram__status"
+          fill="#16a34a">ACCESS PERMITTED</text>
+    <text x="200" y="54" text-anchor="middle">BARRIER ARM</text>
+  </svg>
+  <div class="gate__foot">
+    <span>Last transaction</span><span class="mono">08:14:22</span>
+  </div>
+</div>
+      <div class="gate-readout">
+        <div>
+          <p class="gate-readout__label">Entry status</p>
+          <p class="gate-readout__value gate-readout__value--open">OPEN</p>
+        </div>
+        <hr class="divider" style="margin:4px 0">
+        <dl class="kv "><div><dt>Station</dt><dd>KL Sentral</dd></div><div><dt>Ticket ID</dt><dd class="mono">TKT-2026-884120</dd></div><div><dt>Entry time</dt><dd>08:14:22</dd></div><div><dt>Barrier hold</dt><dd>6 seconds</dd></div></dl>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="table-wrap"><table class="table" style="min-width:560px">
+      <caption style="padding-left:0">Passenger identification resolved at the entry gate</caption>
+      <thead><tr><th>Field</th><th>Value</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>Passenger name</td><td class="cell-strong">Nurul Aisyah binti Rahman</td><td></td></tr>
+        <tr><td>Passenger ID</td><td class="cell-id">PSG-2026-004178</td><td></td></tr>
+        <tr><td>Ticket ID</td><td class="cell-id">TKT-2026-884120</td><td><span class="badge badge--success">Valid</span></td></tr>
+        <tr><td>Account status</td><td>Active</td><td><span class="badge badge--neutral">Permitted</span></td></tr>
+        <tr><td>Wallet balance</td><td><span class="amount">RM 68.40</span></td><td><span class="badge badge--neutral">Sufficient</span></td></tr>
+        <tr><td>Entry time</td><td>23 Nov 2026 · 08:14:22</td><td><span class="badge badge--success">Gate Open</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</div>
+    </div>
+
+    <div class="card">
+  <div class="card__head">
+    <div>
+      <h2 class="card__title">Exit gate interface — successful</h2>
+      <p class="card__sub">GATE-B01 · Subang Jaya · Platform 2</p>
+    </div>
+    <span class="badge badge--success">Gate Open</span>
+  </div>
+  <div class="card__body">
+    <div class="gate-panel">
+      <div class="gate">
+  <div class="gate__head">
+    <div>
+      <p class="gate__id">GATE-B01</p>
+      <p class="gate__station">Subang Jaya · Exit</p>
+    </div>
+    <span class="badge badge--success">Online</span>
+  </div>
+  <div class="lamps">
+    <span class="lamp lamp--open">Open</span>
+    <span class="lamp ">Deny</span>
+    <span class="lamp ">Standby</span>
+  </div>
+  <svg class="gate-diagram" viewBox="0 0 260 108" role="img"
+       aria-label="Barrier gate illustration — access permitted">
+    <defs>
+      <pattern id="stripes-gateb01" width="20" height="11" patternUnits="userSpaceOnUse">
+        <rect width="20" height="11" fill="#f8fafc"/>
+        <rect width="10" height="11" fill="#16a34a"/>
+      </pattern>
+      <linearGradient id="post-gateb01" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#2b5074"/><stop offset="1" stop-color="#142b45"/>
+      </linearGradient>
+    </defs>
+    <line x1="8" y1="92" x2="252" y2="92" stroke="#cbd5e1" stroke-width="1"
+          stroke-dasharray="4 4"/>
+    <rect x="18" y="80" width="34" height="12" rx="3" fill="#33506e"/>
+    <rect x="26" y="30" width="17" height="52" rx="3" fill="url(#post-gateb01)"/>
+    <circle cx="34.5" cy="42" r="5.5" fill="#16a34a"/>
+    <circle cx="34.5" cy="42" r="8.5" fill="none" stroke="#16a34a"
+            stroke-opacity="0.28" stroke-width="3"/>
+    <g transform="rotate(-58 34 74)"><rect x="34" y="68" width="150" height="11" rx="3" fill="url(#stripes-gateb01)"/><rect x="34" y="68" width="150" height="11" rx="3" fill="none" stroke="#94a3b8" stroke-width="0.6"/></g>
+    <circle cx="34" cy="74" r="4.5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+    <text x="200" y="40" text-anchor="middle" class="gate-diagram__status"
+          fill="#16a34a">ACCESS PERMITTED</text>
+    <text x="200" y="54" text-anchor="middle">BARRIER ARM</text>
+  </svg>
+  <div class="gate__foot">
+    <span>Last transaction</span><span class="mono">08:41:07</span>
+  </div>
+</div>
+      <div class="gate-readout">
+        <div>
+          <p class="gate-readout__label">Payment status</p>
+          <p class="gate-readout__value gate-readout__value--open">PAID</p>
+        </div>
+        <hr class="divider" style="margin:4px 0">
+        <dl class="kv "><div><dt>Fare charged</dt><dd><span class="amount">RM 2.60</span></dd></div><div><dt>Balance after</dt><dd><span class="amount">RM 68.40</span></dd></div><div><dt>Duration</dt><dd>27 min</dd></div><div><dt>Distance</dt><dd>18.6 km</dd></div></dl>
+      </div>
+    </div>
+    <hr class="divider">
+    <div class="route">
+      <span class="route__stop"><span class="route__code">KLS</span><span class="route__name">KL Sentral</span></span>
+      <span class="route__line"><span class="route__km">18.6 km · 27 min</span></span>
+      <span class="route__stop" style="text-align:right"><span class="route__code">SBJ</span><span class="route__name">Subang Jaya</span></span>
+    </div>
+    <div class="table-wrap mt-2"><table class="table" style="min-width:540px">
+      <thead><tr><th>Field</th><th>Value</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>Ticket ID</td><td class="cell-id">TKT-2026-884120</td><td><span class="badge badge--success">Valid</span></td></tr>
+        <tr><td>Entry station</td><td>KL Sentral · 08:14:22</td><td></td></tr>
+        <tr><td>Exit station</td><td>Subang Jaya · 08:41:07</td><td></td></tr>
+        <tr><td>Travel duration</td><td>27 minutes</td><td></td></tr>
+        <tr><td>Fare amount</td><td><span class="amount">RM 2.60</span></td><td><span class="badge badge--success">Deducted</span></td></tr>
+        <tr><td>Wallet balance after</td><td><span class="amount">RM 68.40</span></td><td><span class="badge badge--neutral">Sufficient</span></td></tr>
+        <tr><td>Payment status</td><td>Paid in full</td><td><span class="badge badge--success">Gate Open</span></td></tr>
+      </tbody>
+    </table></div>
+    <p class="panel-note mt-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>The deduction shown here is a visual demonstration only.
+      No wallet balance is changed anywhere in this prototype.</p>
+  </div>
+</div>
+    <div class="card">
+  <div class="card__head">
+    <div>
+      <h2 class="card__title">Exit gate interface — failed</h2>
+      <p class="card__sub">GATE-B03 · Subang Jaya · Concourse</p>
+    </div>
+    <span class="badge badge--danger">Access Denied</span>
+  </div>
+  <div class="card__body">
+    <div class="gate-panel">
+      <div class="gate">
+  <div class="gate__head">
+    <div>
+      <p class="gate__id">GATE-B03</p>
+      <p class="gate__station">Subang Jaya · Exit</p>
+    </div>
+    <span class="badge badge--success">Online</span>
+  </div>
+  <div class="lamps">
+    <span class="lamp ">Open</span>
+    <span class="lamp lamp--deny">Deny</span>
+    <span class="lamp ">Standby</span>
+  </div>
+  <svg class="gate-diagram" viewBox="0 0 260 108" role="img"
+       aria-label="Barrier gate illustration — access denied">
+    <defs>
+      <pattern id="stripes-gateb03" width="20" height="11" patternUnits="userSpaceOnUse">
+        <rect width="20" height="11" fill="#f8fafc"/>
+        <rect width="10" height="11" fill="#dc2626"/>
+      </pattern>
+      <linearGradient id="post-gateb03" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0" stop-color="#2b5074"/><stop offset="1" stop-color="#142b45"/>
+      </linearGradient>
+    </defs>
+    <line x1="8" y1="92" x2="252" y2="92" stroke="#cbd5e1" stroke-width="1"
+          stroke-dasharray="4 4"/>
+    <rect x="18" y="80" width="34" height="12" rx="3" fill="#33506e"/>
+    <rect x="26" y="30" width="17" height="52" rx="3" fill="url(#post-gateb03)"/>
+    <circle cx="34.5" cy="42" r="5.5" fill="#dc2626"/>
+    <circle cx="34.5" cy="42" r="8.5" fill="none" stroke="#dc2626"
+            stroke-opacity="0.28" stroke-width="3"/>
+    <g><rect x="34" y="68" width="150" height="11" rx="3" fill="url(#stripes-gateb03)"/><rect x="34" y="68" width="150" height="11" rx="3" fill="none" stroke="#94a3b8" stroke-width="0.6"/></g>
+    <circle cx="34" cy="74" r="4.5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+    <text x="200" y="40" text-anchor="middle" class="gate-diagram__status"
+          fill="#dc2626">ACCESS DENIED</text>
+    <text x="200" y="54" text-anchor="middle">BARRIER ARM</text>
+  </svg>
+  <div class="gate__foot">
+    <span>Last transaction</span><span class="mono">07:59:03</span>
+  </div>
+</div>
+      <div class="gate-readout">
+        <div>
+          <p class="gate-readout__label">Payment status</p>
+          <p class="gate-readout__value gate-readout__value--deny">FAILED</p>
+        </div>
+        <hr class="divider" style="margin:4px 0">
+        <dl class="kv "><div><dt>Fare required</dt><dd><span class="amount">RM 2.60</span></dd></div><div><dt>Wallet balance</dt><dd><span class="amount">RM 4.20</span></dd></div><div><dt>Shortfall</dt><dd><span class="amount">RM 0.00</span></dd></div><div><dt>Barrier</dt><dd>Closed</dd></div></dl>
+      </div>
+    </div>
+    <div class="verdict verdict--invalid mt-2">
+      <span class="verdict__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg></span>
+      <div>
+        <p class="verdict__label">Exit result</p>
+        <p class="verdict__status">ACCESS DENIED</p>
+        <p class="verdict__msg">Passenger account suspended · ticket expired 31 Oct 2026</p>
+      </div>
+    </div>
+    <div class="table-wrap mt-2"><table class="table" style="min-width:540px">
+      <thead><tr><th>Field</th><th>Value</th><th>Result</th></tr></thead>
+      <tbody>
+        <tr><td>Ticket ID</td><td class="cell-id">TKT-2026-004180-771034</td><td><span class="badge badge--danger">Expired</span></td></tr>
+        <tr><td>Passenger</td><td>Tan Wei Ling</td><td><span class="badge badge--danger">Suspended</span></td></tr>
+        <tr><td>Entry station</td><td>Shah Alam · 07:31:44</td><td></td></tr>
+        <tr><td>Exit station</td><td>Subang Jaya · 07:59:03</td><td></td></tr>
+        <tr><td>Fare required</td><td><span class="amount">RM 2.60</span></td><td><span class="badge badge--danger">Not deducted</span></td></tr>
+        <tr><td>Payment status</td><td>Payment failed</td><td><span class="badge badge--danger">Access Denied</span></td></tr>
+      </tbody>
+    </table></div>
+    <p class="panel-note mt-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19L12 3Z"/><path d="M12 9v4M12 17h.01"/></svg>The passenger is directed to the staffed counter.
+      The barrier remains closed until a valid ticket is presented.</p>
+  </div>
+</div>
+    <div class="card" id="gate-activity">
+  <div class="card__head">
+    <div>
+      <h2 class="card__title">Recent gate activity</h2>
+      <p class="card__sub">Every barrier event recorded across the station network today.</p>
+    </div>
+    <div class="btn-row">
+      <span class="pill pill--live"><span class="pill__dot"></span>Live feed (sample)</span>
+      <button class="btn btn--outline btn--sm" type="button" disabled><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12M7 11l5 5 5-5"/><path d="M4 20h16"/></svg> Export</button>
+    </div>
+  </div>
+  <div class="table-wrap"><table class="table " style="min-width:940px"><thead><tr><th>Transaction ID</th><th>Passenger ID</th><th>Station</th><th>Gate ID</th><th>Entry / Exit</th><th>Date &amp; time</th><th>Gate result</th></tr></thead><tbody><tr><td><span class="cell-id">GTX-2026-11-23-3312</span></td><td class="cell-id">PSG-2026-004178</td><td>KL Sentral</td><td><span class="mono">GATE-A03</span></td><td>Entry</td><td class="cell-muted nowrap">23 Nov 2026 · 08:14:22</td><td><span class="badge badge--success">Gate Open</span></td></tr><tr><td><span class="cell-id">GTX-2026-11-23-3313</span></td><td class="cell-id">PSG-2026-004178</td><td>Subang Jaya</td><td><span class="mono">GATE-B01</span></td><td>Exit</td><td class="cell-muted nowrap">23 Nov 2026 · 08:41:07</td><td><span class="badge badge--success">Gate Open</span></td></tr><tr><td><span class="cell-id">GTX-2026-11-23-3311</span></td><td class="cell-id">PSG-2026-004181</td><td>KL Sentral</td><td><span class="mono">GATE-A01</span></td><td>Entry</td><td class="cell-muted nowrap">23 Nov 2026 · 08:12:58</td><td><span class="badge badge--success">Gate Open</span></td></tr><tr><td><span class="cell-id">GTX-2026-11-23-3310</span></td><td class="cell-id">PSG-2026-004180</td><td>Shah Alam</td><td><span class="mono">GATE-C02</span></td><td>Entry</td><td class="cell-muted nowrap">23 Nov 2026 · 08:11:44</td><td><span class="badge badge--danger">Access Denied</span></td></tr><tr><td><span class="cell-id">GTX-2026-11-23-3309</span></td><td class="cell-id">PSG-2026-004179</td><td>KL Sentral</td><td><span class="mono">GATE-A04</span></td><td>Entry</td><td class="cell-muted nowrap">23 Nov 2026 · 08:09:31</td><td><span class="badge badge--success">Gate Open</span></td></tr><tr><td><span class="cell-id">GTX-2026-11-23-3308</span></td><td class="cell-id">PSG-2026-004182</td><td>KLCC</td><td><span class="mono">GATE-D02</span></td><td>Entry</td><td class="cell-muted nowrap">23 Nov 2026 · 08:06:12</td><td><span class="badge badge--success">Gate Open</span></td></tr><tr><td><span class="cell-id">GTX-2026-11-23-3307</span></td><td class="cell-id">PSG-2026-004181</td><td>Klang</td><td><span class="mono">GATE-E01</span></td><td>Exit</td><td class="cell-muted nowrap">23 Nov 2026 · 08:03:47</td><td><span class="badge badge--success">Gate Open</span></td></tr><tr><td><span class="cell-id">GTX-2026-11-23-3306</span></td><td class="cell-id">PSG-2026-004180</td><td>Subang Jaya</td><td><span class="mono">GATE-B03</span></td><td>Exit</td><td class="cell-muted nowrap">23 Nov 2026 · 07:59:03</td><td><span class="badge badge--danger">Insufficient Balance</span></td></tr><tr><td><span class="cell-id">GTX-2026-11-23-3305</span></td><td class="cell-id">PSG-2026-004182</td><td>KL Sentral</td><td><span class="mono">GATE-A02</span></td><td>Entry</td><td class="cell-muted nowrap">23 Nov 2026 · 07:55:20</td><td><span class="badge badge--success">Gate Open</span></td></tr><tr><td><span class="cell-id">GTX-2026-11-23-3304</span></td><td class="cell-id">PSG-2026-004179</td><td>Subang Jaya</td><td><span class="mono">GATE-B02</span></td><td>Exit</td><td class="cell-muted nowrap">23 Nov 2026 · 07:51:09</td><td><span class="badge badge--success">Gate Open</span></td></tr><tr><td><span class="cell-id">GTX-2026-11-23-3303</span></td><td class="cell-id">PSG-2026-004178</td><td>KL Sentral</td><td><span class="mono">GATE-A03</span></td><td>Entry</td><td class="cell-muted nowrap">23 Nov 2026 · 07:44:38</td><td><span class="badge badge--success">Gate Open</span></td></tr><tr><td><span class="cell-id">GTX-2026-11-23-3302</span></td><td class="cell-id">PSG-2026-004181</td><td>KL Sentral</td><td><span class="mono">GATE-A01</span></td><td>Exit</td><td class="cell-muted nowrap">23 Nov 2026 · 07:40:15</td><td><span class="badge badge--success">Gate Open</span></td></tr></tbody><tfoot><tr><td>Gate events today</td><td></td><td></td><td></td><td>1,412 in / 1,435 out</td><td></td><td>86 denied</td></tr></tfoot></table></div>
+  <div class="card__foot">
+    <span>Showing 12 of 2,847 gate events</span>
+    <span><span class="demo-tag">Feed does not refresh</span></span>
+  </div>
+</div>
+  </div>
+
+  <div class="stack">
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Concourse overview</h2><p class="card__sub">Concourse A · northbound barrier bank</p></div></div><div class="card__body"><img class="cardart" src="../assets/images/gate-concourse.svg" width="640" height="400" alt="Illustration of the KL Sentral Concourse A gate bank, showing three cabinets with raised and closed barrier arms."><p class="hint mt-2">GATE-A01 and A03 are open; A02 is holding closed after a denied entry.</p></div></section>
+
+    <section class="card metric--teal"><div class="card__head"><div><h2 class="card__title">Gate fleet status</h2></div></div><div class="card__body"><dl class="kv "><div><dt>Configured gates</dt><dd>8</dd></div><div><dt>Online</dt><dd>6</dd></div><div><dt>Degraded</dt><dd>1</dd></div><div><dt>Offline</dt><dd>1</dd></div><div><dt>Network</dt><dd><span class="badge badge--success">Online</span></dd></div><div><dt>Controller</dt><dd class="mono">GCC-KLS-02</dd></div></dl></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Ticket identification</h2></div></div><div class="card__body">
+      <p class="hint">A gate resolves the passenger from one of three media references before
+      it can decide whether to open.</p>
+      <div class="table-wrap mt-2"><table class="table" style="min-width:0">
+        <tbody>
+          <tr><td>NFC card</td><td class="mono cell-id">AFC-CARD-4401982</td></tr>
+          <tr><td>Mobile QR</td><td class="mono cell-id">QR-MYR-884120</td></tr>
+          <tr><td>Paper barcode</td><td class="mono cell-id">BC-2026-884120</td></tr>
+        </tbody>
+      </table></div>
+      <p class="hint mt-2">These match the references shown in the media processing module.</p></div><div class="card__foot"><a class="card__link" href="media-processing.html">Validate a media reference →</a></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Entry / exit outcomes</h2></div></div><div class="card__body">
+      <div class="stack stack--sm">
+        <div class="inline-list" style="justify-content:space-between">
+          <span class="text-sm">Gate open</span><span class="badge badge--success">Permitted</span></div>
+        <div class="inline-list" style="justify-content:space-between">
+          <span class="text-sm">Access denied</span><span class="badge badge--danger">Blocked</span></div>
+        <div class="inline-list" style="justify-content:space-between">
+          <span class="text-sm">Insufficient balance</span><span class="badge badge--danger">Blocked</span></div>
+        <div class="inline-list" style="justify-content:space-between">
+          <span class="text-sm">Ticket expired</span><span class="badge badge--danger">Blocked</span></div>
+      </div>
+      <p class="hint mt-2">A denied exit keeps the barrier closed and raises a staff alert at
+      the concourse console.</p></div></section>
+
+    <div class="alert alert--warning"><svg class="alert__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19L12 3Z"/><path d="M12 9v4M12 17h.01"/></svg><div><strong>Demonstration only</strong> Gate actions on this page are static. No barrier is driven, no fare is deducted and no event is written to a log.</div></div>
+  </div>
+</div>
+
+<div class="card mt-2">
+  <div class="card__head">
+    <div>
+      <h2 class="card__title">Gate device register</h2>
+      <p class="card__sub">All barriers configured on the network, with today's read volume.</p>
+    </div>
+    <a class="card__link" href="#gate-activity">Jump to activity log →</a>
+  </div>
+  <div class="table-wrap"><table class="table " style="min-width:760px"><thead><tr><th>Gate ID</th><th>Station &amp; location</th><th>Mode</th><th>Device status</th><th class="num">Reads today</th><th class="num">Denied</th></tr></thead><tbody><tr><td><span class="mono cell-strong">GATE-A01</span></td><td>KL Sentral<span class="cell-sub">Concourse A</span></td><td>Entry</td><td><span class="badge badge--success">Online</span></td><td class="num">412</td><td class="num">0</td></tr><tr><td><span class="mono cell-strong">GATE-A02</span></td><td>KL Sentral<span class="cell-sub">Concourse A</span></td><td>Entry</td><td><span class="badge badge--success">Online</span></td><td class="num">388</td><td class="num">2</td></tr><tr><td><span class="mono cell-strong">GATE-A03</span></td><td>KL Sentral<span class="cell-sub">Concourse A</span></td><td>Entry / Exit</td><td><span class="badge badge--success">Online</span></td><td class="num">506</td><td class="num">1</td></tr><tr><td><span class="mono cell-strong">GATE-B01</span></td><td>Subang Jaya<span class="cell-sub">Platform 2</span></td><td>Exit</td><td><span class="badge badge--success">Online</span></td><td class="num">341</td><td class="num">0</td></tr><tr><td><span class="mono cell-strong">GATE-B02</span></td><td>Subang Jaya<span class="cell-sub">Platform 2</span></td><td>Exit</td><td><span class="badge badge--success">Online</span></td><td class="num">298</td><td class="num">1</td></tr><tr><td><span class="mono cell-strong">GATE-C02</span></td><td>Shah Alam<span class="cell-sub">Concourse</span></td><td>Entry</td><td><span class="badge badge--success">Online</span></td><td class="num">176</td><td class="num">7</td></tr><tr><td><span class="mono cell-strong">GATE-D02</span></td><td>KLCC<span class="cell-sub">Concourse</span></td><td>Entry</td><td><span class="badge badge--warning">Degraded</span></td><td class="num">203</td><td class="num">4</td></tr><tr><td><span class="mono cell-strong">GATE-E01</span></td><td>Klang<span class="cell-sub">Platform 1</span></td><td>Exit</td><td><span class="badge badge--danger">Offline</span></td><td class="num">0</td><td class="num">0</td></tr></tbody></table></div>
+  <div class="card__foot">
+    <span>8 gate devices · 2 stations reporting degraded or offline</span>
+    <span>Last heartbeat: <strong>23 Nov 2026 · 09:42:11</strong></span>
+  </div>
+</div>
+  </main>
+  <footer class="footer">
+    <span>© 2026 AFC System · Rangkaian Transit Nasional — front-end prototype. All records are fictional sample data.</span>
+    <span class="footer__links"><a href="../pages/passenger-dashboard.html">Passenger Portal</a><a href="../pages/media-processing.html">Media Processing</a><a href="../pages/gate-control.html">Gate Control</a><a href="../pages/fare-management.html">Fare Management</a><a href="../pages/clearing-house.html">Clearing House</a><a href="../index.html">Home</a></span>
+  </footer>
+  </div>
+</div>
+</body>
+</html>

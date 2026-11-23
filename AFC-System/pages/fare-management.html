@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fare Management · AFC System</title>
+<meta name="description" content="Automated Fare Collection & Access Control System — front-end prototype for Rangkaian Transit Nasional. Static demonstration data only.">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar__top">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Z"/><path d="M4 10h16M9 13h.01M15 13h.01"/><path d="m7 17-2 4M17 17l2 4"/></svg></span>
+        <span>
+          <span class="brand__name">AFC System</span>
+          <span class="brand__sub">Fare Management</span>
+        </span>
+      </a>
+    </div>
+    <div class="sidebar__rule"></div>
+    <div class="nav-group">
+      <span class="nav-group__label">Fare Management</span>
+      <nav class="nav" aria-label="Fare Management navigation">
+        <li><a href="fare-management.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Dashboard</span></a></li>
+        <li><a href="station-management.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg><span>Station Management</span></a></li>
+        <li><a href="fare-management.html#fare-rules" class="is-active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12v18l-3-2-3 2-3-2-3 2Z"/><path d="M9 8h6M9 12h6"/></svg><span>Fare Management</span></a></li>
+        <li><a href="fare-calculation.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h4"/></svg><span>Fare Calculation</span></a></li>
+        <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 17l-5-5 5-5"/><path d="M5 12h11"/></svg><span>Logout</span></a></li>
+      </nav>
+    </div>
+    <div class="sidebar__foot">
+      <details class="module-switch">
+        <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg> Switch module <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <ul>
+        <li><a href="../pages/passenger-dashboard.html">Passenger Portal<span class="sr-only"> — Aizat</span></a></li><li><a href="../pages/media-processing.html">Media Processing<span class="sr-only"> — Mirul</span></a></li><li><a href="../pages/gate-control.html">Gate Control<span class="sr-only"> — Gate Control</span></a></li><li><a href="../pages/fare-management.html" style="color:#7fd8cb;font-weight:600">Fare Management<span class="sr-only"> — Ile</span></a></li><li><a href="../pages/clearing-house.html">Clearing House<span class="sr-only"> — Harith Hakim</span></a></li><li><a href="../index.html">Prototype home</a></li>
+        </ul>
+      </details>
+      <div class="sidebar__meta"><span class="dot"></span> Static prototype · v1.0</div>
+    </div>
+  </aside>
+  <div class="main" id="main">
+  <header class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="crumbs__sep" aria-hidden="true">/</span><a href="fare-management.html">Fare Management</a><span class="crumbs__sep" aria-hidden="true">/</span><span class="crumbs__current" aria-current="page">Fare Management</span>
+    </nav>
+    <div class="topbar__meta">
+      <span class="pill pill--demo" title="This build is a static front-end prototype">
+        <span class="pill__dot" aria-hidden="true"></span><span class="pill__text">Demo data</span>
+      </span>
+      <span class="pill topbar__clock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>23 Nov 2026 · 09:42 MYT</span>
+      <div class="user">
+        <span class="avatar avatar--teal" aria-hidden="true">IN</span>
+        <span class="user__text">
+          <span class="user__name">Ile Nazira</span>
+          <span class="user__role">Fare Management Administrator</span>
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="content" id="main">
+    <div class="page-head">
+      <div>
+        <p class="eyebrow">Member 4 · Fare Management <span class="eyebrow__sep">/</span> <span class="eyebrow__muted">Fare table v2026.11</span></p>
+        <h1 class="page-title">Fare Management</h1>
+        <p class="page-sub">Maintain the distance-based fare table used by every gate on the network.</p>
+      </div>
+      <div class="page-actions"><a class="btn btn--outline" href="station-management.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s7-5.4 7-11a7 7 0 1 0-14 0c0 5.6 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg> Stations</a><a class="btn btn--primary" href="fare-calculation.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 7h8M8 11h.01M12 11h.01M16 11h.01M8 15h.01M12 15h.01M16 15h.01M8 19h4"/></svg> Calculate fare</a></div>
+    </div>
+    <div class="grid grid--metrics">
+  <div class="metric metric--navy"><p class="metric__label">Fare rules</p><p class="metric__value">9</p><p class="metric__foot">7 active · 1 draft · 1 inactive</p></div>
+  <div class="metric metric--ok"><p class="metric__label">Active rules</p><p class="metric__value">7</p><p class="metric__foot">Applied at every gate</p></div>
+  <div class="metric "><p class="metric__label">Lowest fare</p><p class="metric__value">RM 1.40</p><p class="metric__foot">KL Sentral → KLCC (6.4 km)</p></div>
+  <div class="metric "><p class="metric__label">Highest fare</p><p class="metric__value">RM 8.60</p><p class="metric__foot">KL Sentral → Tanjung Malim (74.5 km)</p></div>
+</div>
+
+<div class="grid grid--aside mt-2">
+  <div class="stack" id="fare-rules">
+    <div class="card">
+      <div class="card__head">
+        <div>
+          <h2 class="card__title">Fare rule register</h2>
+          <p class="card__sub">Distance-based fares charged between station pairs.</p>
+        </div>
+        <span class="pill pill--demo"><span class="pill__dot"></span>Static rate table</span>
+      </div>
+      <div class="table-wrap"><table class="table " style="min-width:980px"><thead><tr><th>Fare rule ID</th><th>Entry station</th><th>Exit station</th><th class="num">Distance (km)</th><th class="num">Fare amount</th><th class="num">Rate / km</th><th>Status</th><th></th></tr></thead><tbody><tr><td><span class="cell-id">FAR-001</span></td><td>KL Sentral</td><td>Subang Jaya</td><td class="num">18.6</td><td class="num"><span class="amount">RM 2.60</span></td><td class="num cell-muted">RM 0.140</td><td><span class="badge badge--success">Active</span></td><td class="num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">FAR-002</span></td><td>KL Sentral</td><td>Shah Alam</td><td class="num">25.4</td><td class="num"><span class="amount">RM 3.40</span></td><td class="num cell-muted">RM 0.134</td><td><span class="badge badge--success">Active</span></td><td class="num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">FAR-003</span></td><td>Subang Jaya</td><td>Shah Alam</td><td class="num">7.8</td><td class="num"><span class="amount">RM 1.60</span></td><td class="num cell-muted">RM 0.205</td><td><span class="badge badge--success">Active</span></td><td class="num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">FAR-004</span></td><td>KL Sentral</td><td>Klang</td><td class="num">33.2</td><td class="num"><span class="amount">RM 4.20</span></td><td class="num cell-muted">RM 0.127</td><td><span class="badge badge--success">Active</span></td><td class="num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">FAR-005</span></td><td>KL Sentral</td><td>Sungai Buloh</td><td class="num">22.1</td><td class="num"><span class="amount">RM 3.00</span></td><td class="num cell-muted">RM 0.136</td><td><span class="badge badge--success">Active</span></td><td class="num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">FAR-006</span></td><td>KL Sentral</td><td>Tanjung Malim</td><td class="num">74.5</td><td class="num"><span class="amount">RM 8.60</span></td><td class="num cell-muted">RM 0.115</td><td><span class="badge badge--success">Active</span></td><td class="num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">FAR-007</span></td><td>KL Sentral</td><td>KLCC</td><td class="num">6.4</td><td class="num"><span class="amount">RM 1.40</span></td><td class="num cell-muted">RM 0.219</td><td><span class="badge badge--success">Active</span></td><td class="num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">FAR-008</span></td><td>Bandar Tasik Selatan</td><td>KL Sentral</td><td class="num">9.2</td><td class="num"><span class="amount">RM 1.80</span></td><td class="num cell-muted">RM 0.196</td><td><span class="badge badge--neutral">Draft</span></td><td class="num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr><tr><td><span class="cell-id">FAR-009</span></td><td>Subang Jaya</td><td>Klang</td><td class="num">14.6</td><td class="num"><span class="amount">RM 2.20</span></td><td class="num cell-muted">RM 0.151</td><td><span class="badge badge--neutral">Inactive</span></td><td class="num"><button class="btn btn--ghost btn--sm" type="button">Edit</button></td></tr></tbody></table></div>
+      <div class="card__foot">
+        <span>Showing 9 of 9 fare rules</span>
+        <span>Fare table version: <strong>v2026.11</strong> · effective 01 Nov 2026</span>
+      </div>
+    </div>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Add a fare rule</h2><p class="card__sub">Fares are stored per station pair; the gate interpolates for unlisted pairs.</p></div></div><div class="card__body">
+      <form action="fare-management.html" method="get">
+        <div class="form-grid">
+          <div class="field"><label for="r-entry">Entry station<span class="req" aria-hidden="true">*</span></label><select class="select" id="r-entry"><option>KL Sentral</option><option>KLCC</option><option>Petaling Jaya</option><option>Subang Jaya</option><option>Shah Alam</option><option>Klang</option><option>Sungai Buloh</option><option>Bandar Tasik Selatan</option><option>Kepong Sentral</option><option>Tanjung Malim</option></select><p class="hint">Origin of the journey.</p></div>
+          <div class="field"><label for="r-exit">Exit station<span class="req" aria-hidden="true">*</span></label><select class="select" id="r-exit"><option>KLCC</option><option>Petaling Jaya</option><option>Subang Jaya</option><option>Shah Alam</option><option>Klang</option><option>Sungai Buloh</option><option>Bandar Tasik Selatan</option><option>Kepong Sentral</option><option>Tanjung Malim</option></select><p class="hint">Destination of the journey.</p></div>
+          <div class="field"><label for="r-km">Distance (km)<span class="req" aria-hidden="true">*</span></label><div class="input-group"><input class="input" type="number" id="r-km" name="distance" min="0.1" step="0.1" placeholder="0.0" inputmode="decimal"><span class="addon">km</span></div><p class="hint">Measured along the track, not straight-line.</p></div>
+          <div class="field"><label for="r-fare">Fare amount (RM)<span class="req" aria-hidden="true">*</span></label><div class="input-group input-group--prefix"><span class="addon">RM</span><input class="input" type="number" id="r-fare" name="fare" min="0" step="0.10" placeholder="0.00" inputmode="decimal"></div><p class="hint">Rounded to the nearest 10 sen.</p></div>
+          <div class="field"><label for="r-status">Fare status</label><select class="select" id="r-status"><option>Active</option><option>Draft</option><option>Inactive</option></select><p class="hint">Only active rules are applied at gates.</p></div>
+          <div class="field"><label for="r-eff">Effective from</label><input class="input" type="date" id="r-eff" name="effective" value="2026-11-23" placeholder=""><p class="hint">Date the rule becomes chargeable.</p></div>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn--primary" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg> Save fare rule</button>
+          <button class="btn btn--outline" type="reset">Reset</button>
+          <span class="demo-tag">No rule is stored</span>
+        </div>
+      </form></div><div class="card__foot"><span>Changes take effect on the next gate synchronisation.</span><span>v2026.11</span></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Suggested fare bands</h2><p class="card__sub">Rate tapers as distance increases; the bands are illustrative.</p></div></div><div class="card__body card__body--tight">
+      <div class="table-wrap"><table class="table" style="min-width:520px">
+        <thead><tr><th>Distance band</th><th class="num">Rate / km</th><th class="num">Example fare</th><th>Applies to</th></tr></thead>
+        <tbody>
+          <tr><td>0 – 10 km</td><td class="num">RM 0.219</td><td class="num"><span class="amount">RM 1.40</span></td><td>Inner city</td></tr>
+          <tr><td>10 – 30 km</td><td class="num">RM 0.135</td><td class="num"><span class="amount">RM 3.40</span></td><td>Suburban</td></tr>
+          <tr><td>30 – 60 km</td><td class="num">RM 0.126</td><td class="num"><span class="amount">RM 4.20</span></td><td>Regional</td></tr>
+          <tr><td>60 km +</td><td class="num">RM 0.115</td><td class="num"><span class="amount">RM 8.60</span></td><td>Intercity</td></tr>
+        </tbody>
+      </table></div></div></section>
+  </div>
+
+  <div class="stack">
+    <section class="card metric--teal"><div class="card__head"><div><h2 class="card__title">Fare policy</h2></div></div><div class="card__body"><dl class="kv "><div><dt>Pricing model</dt><dd>Distance-based</dd></div><div><dt>Rate taper</dt><dd>4 bands</dd></div><div><dt>Minimum fare</dt><dd><span class="amount">RM 1.40</span></dd></div><div><dt>Maximum fare</dt><dd><span class="amount">RM 8.60</span></dd></div><div><dt>Rounding</dt><dd>Nearest 10 sen</dd></div><div><dt>Concession discount</dt><dd>50%</dd></div><div><dt>Children under 6</dt><dd>Free</dd></div></dl></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Who is charged what</h2></div></div><div class="card__body">
+      <div class="table-wrap"><table class="table" style="min-width:0">
+        <tbody>
+          <tr><td>Adult stored value</td><td class="num">Full fare</td></tr>
+          <tr><td>Adult monthly pass</td><td class="num">Prepaid</td></tr>
+          <tr><td>Student concession</td><td class="num">50% off</td></tr>
+          <tr><td>Senior concession</td><td class="num">50% off</td></tr>
+          <tr><td>Person with disability</td><td class="num">Free</td></tr>
+        </tbody>
+      </table></div></div><div class="card__foot"><a class="card__link" href="fare-calculation.html">See a fare calculation →</a></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Rule conflicts</h2></div></div><div class="card__body">
+      <div class="inline-list" style="justify-content:space-between">
+        <span class="text-sm">Duplicated station pairs</span><span class="badge badge--success">None</span></div>
+      <div class="inline-list mt-2" style="justify-content:space-between">
+        <span class="text-sm">Rules without distance</span><span class="badge badge--success">None</span></div>
+      <div class="inline-list mt-2" style="justify-content:space-between">
+        <span class="text-sm">Draft rules pending</span><span class="badge badge--warning">1 pending</span></div>
+      <p class="hint mt-2">FAR-008 (Bandar Tasik Selatan → KL Sentral) is a draft and will not be
+        charged until approved.</p></div></section>
+
+    <div class="alert alert--warning"><svg class="alert__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19L12 3Z"/><path d="M12 9v4M12 17h.01"/></svg><div><strong>Demonstration only</strong> Saving a fare rule does not change the fare table. Rates on this page are fixed demonstration values.</div></div>
+  </div>
+</div>
+  </main>
+  <footer class="footer">
+    <span>© 2026 AFC System · Rangkaian Transit Nasional — front-end prototype. All records are fictional sample data.</span>
+    <span class="footer__links"><a href="../pages/passenger-dashboard.html">Passenger Portal</a><a href="../pages/media-processing.html">Media Processing</a><a href="../pages/gate-control.html">Gate Control</a><a href="../pages/fare-management.html">Fare Management</a><a href="../pages/clearing-house.html">Clearing House</a><a href="../index.html">Home</a></span>
+  </footer>
+  </div>
+</div>
+</body>
+</html>

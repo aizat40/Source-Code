@@ -1,0 +1,72 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 200" width="800" height="200" role="img" aria-labelledby="t d">
+  <title id="t">Station platform banner</title>
+  <desc id="d">Wide illustration of a rail platform with train, canopy and platform edge markings.</desc>
+
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#203e5d"/><stop offset="1" stop-color="#142b45"/>
+    </linearGradient>
+    <linearGradient id="trainb" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f7fa"/><stop offset="0.6" stop-color="#dfe8f1"/>
+      <stop offset="1" stop-color="#c3d0dd"/>
+    </linearGradient>
+    <style>
+      .pb { font-family:"Segoe UI",Arial,sans-serif; font-size:12px; font-weight:700; fill:#ffffff; letter-spacing:.06em; }
+      .pbs { font-family:"Segoe UI",Arial,sans-serif; font-size:9px; font-weight:600; fill:#7fd8cb; letter-spacing:.14em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="200" fill="url(#sky)"/>
+
+  <!-- Grid texture -->
+  <g stroke="#ffffff" stroke-opacity=".05" stroke-width="1">
+    <path d="M0 40h800M0 80h800M0 120h800M0 160h800"/>
+    <path d="M100 0v200M200 0v200M300 0v200M400 0v200M500 0v200M600 0v200M700 0v200"/>
+  </g>
+
+  <!-- Canopy -->
+  <path d="M0 34h800" stroke="#2b5074" stroke-width="5"/>
+  <g stroke="#2b5074" stroke-width="3">
+    <path d="M120 34v46M320 34v46M520 34v46M720 34v46"/>
+  </g>
+
+  <!-- Train -->
+  <g>
+    <rect x="86" y="86" width="628" height="76" rx="14" fill="url(#trainb)"/>
+    <!-- livery band -->
+    <rect x="86" y="120" width="628" height="10" fill="#0f766e"/>
+    <rect x="86" y="130" width="628" height="4" fill="#f59e0b" opacity=".85"/>
+    <!-- windows -->
+    <g fill="#203e5d" opacity=".82">
+      <rect x="106" y="98" width="54" height="18" rx="4"/>
+      <rect x="176" y="98" width="54" height="18" rx="4"/>
+      <rect x="246" y="98" width="54" height="18" rx="4"/>
+      <rect x="316" y="98" width="54" height="18" rx="4"/>
+      <rect x="386" y="98" width="54" height="18" rx="4"/>
+      <rect x="456" y="98" width="54" height="18" rx="4"/>
+      <rect x="526" y="98" width="54" height="18" rx="4"/>
+      <rect x="596" y="98" width="54" height="18" rx="4"/>
+    </g>
+    <!-- doors -->
+    <g fill="#94a3b8" opacity=".55">
+      <rect x="662" y="94" width="30" height="60" rx="3"/>
+    </g>
+    <!-- headlight -->
+    <circle cx="702" cy="108" r="5" fill="#fde68a"/>
+    <!-- wheels/bogies -->
+    <g fill="#334155">
+      <rect x="140" y="158" width="58" height="10" rx="4"/>
+      <rect x="290" y="158" width="58" height="10" rx="4"/>
+      <rect x="440" y="158" width="58" height="10" rx="4"/>
+      <rect x="590" y="158" width="58" height="10" rx="4"/>
+    </g>
+  </g>
+
+  <!-- Platform edge -->
+  <rect x="0" y="168" width="800" height="6" fill="#f59e0b"/>
+  <rect x="0" y="174" width="800" height="26" fill="#0d1e31"/>
+
+  <!-- Branding -->
+  <text class="pbs" x="42" y="24">RANGKAIAN TRANSIT NASIONAL</text>
+  <text class="pb" x="758" y="24" text-anchor="end">PLATFORM 2 · SUBANG JAYA</text>
+</svg>

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Clearing House Dashboard · AFC System</title>
+<meta name="description" content="Automated Fare Collection & Access Control System — front-end prototype for Rangkaian Transit Nasional. Static demonstration data only.">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar__top">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Z"/><path d="M4 10h16M9 13h.01M15 13h.01"/><path d="m7 17-2 4M17 17l2 4"/></svg></span>
+        <span>
+          <span class="brand__name">AFC System</span>
+          <span class="brand__sub">Clearing House</span>
+        </span>
+      </a>
+    </div>
+    <div class="sidebar__rule"></div>
+    <div class="nav-group">
+      <span class="nav-group__label">Clearing House</span>
+      <nav class="nav" aria-label="Clearing House navigation">
+        <li><a href="clearing-house.html" class="is-active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Dashboard</span></a></li>
+        <li><a href="transactions.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg><span>Transactions</span></a></li>
+        <li><a href="clearing-house.html#operator-summary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 21V6a2 2 0 0 1 2-2h6a2 2 0 0 1 2 2v15"/><path d="M14 10h4a2 2 0 0 1 2 2v9"/><path d="M2 21h20M8 8h2M8 12h2M8 16h2"/></svg><span>Operator Summary</span></a></li>
+        <li><a href="reconciliation.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10"/><path d="m5 8 4 6H1l4-6Z"/><path d="m19 8 4 6h-8l4-6Z"/><path d="M5 8h14"/></svg><span>Settlement Reconciliation</span></a></li>
+        <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 17l-5-5 5-5"/><path d="M5 12h11"/></svg><span>Logout</span></a></li>
+      </nav>
+    </div>
+    <div class="sidebar__foot">
+      <details class="module-switch">
+        <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg> Switch module <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <ul>
+        <li><a href="../pages/passenger-dashboard.html">Passenger Portal<span class="sr-only"> — Aizat</span></a></li><li><a href="../pages/media-processing.html">Media Processing<span class="sr-only"> — Mirul</span></a></li><li><a href="../pages/gate-control.html">Gate Control<span class="sr-only"> — Gate Control</span></a></li><li><a href="../pages/fare-management.html">Fare Management<span class="sr-only"> — Ile</span></a></li><li><a href="../pages/clearing-house.html" style="color:#7fd8cb;font-weight:600">Clearing House<span class="sr-only"> — Harith Hakim</span></a></li><li><a href="../index.html">Prototype home</a></li>
+        </ul>
+      </details>
+      <div class="sidebar__meta"><span class="dot"></span> Static prototype · v1.0</div>
+    </div>
+  </aside>
+  <div class="main" id="main">
+  <header class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="crumbs__sep" aria-hidden="true">/</span><a href="clearing-house.html">Clearing House</a><span class="crumbs__sep" aria-hidden="true">/</span><span class="crumbs__current" aria-current="page">Dashboard</span>
+    </nav>
+    <div class="topbar__meta">
+      <span class="pill pill--demo" title="This build is a static front-end prototype">
+        <span class="pill__dot" aria-hidden="true"></span><span class="pill__text">Demo data</span>
+      </span>
+      <span class="pill topbar__clock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>23 Nov 2026 · 09:42 MYT</span>
+      <div class="user">
+        <span class="avatar avatar--teal" aria-hidden="true">HH</span>
+        <span class="user__text">
+          <span class="user__name">Harith Hakim</span>
+          <span class="user__role">Clearing House Administrator</span>
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="content" id="main">
+    <div class="page-head">
+      <div>
+        <p class="eyebrow">Member 5 · Central Clearing House <span class="eyebrow__sep">/</span> <span class="eyebrow__muted">Business day 23 Nov 2026</span></p>
+        <h1 class="page-title">Clearing House Dashboard</h1>
+        <p class="page-sub">Daily fare collection, operator totals and settlement position across the whole network.</p>
+      </div>
+      <div class="page-actions"><a class="btn btn--outline" href="transactions.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M8 6h13M8 12h13M8 18h13"/><path d="M3 6h.01M3 12h.01M3 18h.01"/></svg> Transactions</a><a class="btn btn--primary" href="reconciliation.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10"/><path d="m5 8 4 6H1l4-6Z"/><path d="m19 8 4 6h-8l4-6Z"/><path d="M5 8h14"/></svg> Reconcile</a></div>
+    </div>
+    <div class="grid grid--metrics grid--metrics--6">
+      <div class="metric metric--navy"><p class="metric__label">Total daily transactions</p><p class="metric__value">2,847</p><p class="metric__foot">23 Nov 2026 · all operators</p></div>
+      <div class="metric "><p class="metric__label">Total fare collection</p><p class="metric__value">RM 18,462.30</p><p class="metric__foot">Gross, before settlement</p></div>
+      <div class="metric metric--ok"><p class="metric__label">Successful</p><p class="metric__value">2,761</p><p class="metric__foot">97.0% of all transactions</p></div>
+      <div class="metric metric--bad"><p class="metric__label">Failed</p><p class="metric__value">86</p><p class="metric__foot">Insufficient balance · expired · declined</p></div>
+      <div class="metric "><p class="metric__label">Total settlement</p><p class="metric__value">RM 18,455.80</p><p class="metric__foot">Received from 4 operators</p></div>
+      <div class="metric metric--teal"><p class="metric__label">Settlement differences</p><p class="metric__value">RM 6.50</p><p class="metric__foot">2 of 4 operators differ</p></div>
+    </div>
+
+<div class="grid grid--sidebar mt-2" id="operator-summary">
+  <div class="stack">
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Daily operator summary</h2><p class="card__sub">Transaction totals grouped by transit operator for the current business day.</p></div><div class="btn-row"><a class="card__link" href="transactions.html">All transactions →</a></div></div><div class="card__body card__body--tight"><div class="table-wrap"><table class="table table--compact" style="min-width:560px"><thead><tr><th>Operator ID</th><th>Operator name</th><th class="num">Transactions</th><th class="num">Successful</th><th class="num">Failed</th><th class="num">Rate</th><th class="num">Fare collected</th></tr></thead><tbody><tr><td><span class="cell-id">OPR-01</span></td><td class="cell-strong">Rangkaian Transit Nasional<span class="cell-sub">Komuter</span></td><td class="num">1,284</td><td class="num">1,251</td><td class="num">33</td><td class="num">97.4%</td><td class="num"><span class="amount">RM 7,842.60</span></td></tr><tr><td><span class="cell-id">OPR-02</span></td><td class="cell-strong">Ekspres Rail Malaysia<span class="cell-sub">Intercity</span></td><td class="num">412</td><td class="num">398</td><td class="num">14</td><td class="num">96.6%</td><td class="num"><span class="amount">RM 4,318.40</span></td></tr><tr><td><span class="cell-id">OPR-03</span></td><td class="cell-strong">Metro Lintas Bandar<span class="cell-sub">LRT / MRT</span></td><td class="num">861</td><td class="num">838</td><td class="num">23</td><td class="num">97.3%</td><td class="num"><span class="amount">RM 4,905.30</span></td></tr><tr><td><span class="cell-id">OPR-04</span></td><td class="cell-strong">Transit Aliran Ringan<span class="cell-sub">LRT</span></td><td class="num">290</td><td class="num">274</td><td class="num">16</td><td class="num">94.5%</td><td class="num"><span class="amount">RM 1,396.00</span></td></tr></tbody><tfoot><tr><td>All operators</td><td></td><td class="num">2,847</td><td class="num">2,761</td><td class="num">86</td><td class="num">97.0%</td><td class="num">RM 18,462.30</td></tr></tfoot></table></div></div><div class="card__foot"><span>4 operators · 23 Nov 2026 · cut-off 23:59</span><span><span class="demo-tag">Sample totals</span></span></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Recent fare transactions</h2><p class="card__sub">Newest gate settlements received by the clearing house.</p></div><div class="btn-row"><a class="card__link" href="transactions.html">Open register →</a></div></div><div class="card__body card__body--tight"><div class="table-wrap"><table class="table " style="min-width:820px"><thead><tr><th>Transaction ID</th><th>Passenger ID</th><th>Operator</th><th>Journey</th><th class="num">Fare</th><th>Status</th></tr></thead><tbody><tr><td><span class="cell-id">TXN-2026-11-23-1041</span></td><td class="cell-id">PSG-2026-004178</td><td>RTN</td><td>KL Sentral<span class="cell-sub">to Subang Jaya</span></td><td class="num"><span class="amount">RM 2.60</span></td><td><span class="badge badge--success">Completed</span></td></tr><tr><td><span class="cell-id">TXN-2026-11-23-1040</span></td><td class="cell-id">PSG-2026-004181</td><td>RTN</td><td>KL Sentral<span class="cell-sub">to Klang</span></td><td class="num"><span class="amount">RM 4.20</span></td><td><span class="badge badge--success">Completed</span></td></tr><tr><td><span class="cell-id">TXN-2026-11-23-1039</span></td><td class="cell-id">PSG-2026-004179</td><td>ERM</td><td>KL Sentral<span class="cell-sub">to Tanjung Malim</span></td><td class="num"><span class="amount">RM 8.60</span></td><td><span class="badge badge--success">Completed</span></td></tr><tr><td><span class="cell-id">TXN-2026-11-23-1038</span></td><td class="cell-id">PSG-2026-004182</td><td>MLB</td><td>KLCC<span class="cell-sub">to KL Sentral</span></td><td class="num"><span class="amount">RM 1.40</span></td><td><span class="badge badge--success">Completed</span></td></tr><tr><td><span class="cell-id">TXN-2026-11-23-1037</span></td><td class="cell-id">PSG-2026-004180</td><td>RTN</td><td>Shah Alam<span class="cell-sub">to KL Sentral</span></td><td class="num"><span class="amount">RM 3.40</span></td><td><span class="badge badge--danger">Failed – insufficient balance</span></td></tr><tr><td><span class="cell-id">TXN-2026-11-23-1036</span></td><td class="cell-id">PSG-2026-004178</td><td>MLB</td><td>KL Sentral<span class="cell-sub">to KLCC</span></td><td class="num"><span class="amount">RM 1.40</span></td><td><span class="badge badge--success">Completed</span></td></tr><tr><td><span class="cell-id">TXN-2026-11-23-1035</span></td><td class="cell-id">PSG-2026-004181</td><td>RTN</td><td>Sungai Buloh<span class="cell-sub">to KL Sentral</span></td><td class="num"><span class="amount">RM 3.00</span></td><td><span class="badge badge--success">Completed</span></td></tr><tr><td><span class="cell-id">TXN-2026-11-23-1034</span></td><td class="cell-id">PSG-2026-004182</td><td>TAR</td><td>Subang Jaya<span class="cell-sub">to Shah Alam</span></td><td class="num"><span class="amount">RM 1.60</span></td><td><span class="badge badge--success">Completed</span></td></tr></tbody></table></div></div><div class="card__foot"><span>Showing 8 of 2,847 transactions</span><span>Last received 09:42:07</span></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Settlement position</h2><p class="card__sub">System totals compared against external settlement records.</p></div><div class="btn-row"><a class="card__link" href="reconciliation.html">Reconcile →</a></div></div><div class="card__body card__body--tight"><div class="table-wrap"><table class="table " style="min-width:780px"><thead><tr><th>Operator</th><th class="num">System collection</th><th class="num">Settlement received</th><th class="num">Difference</th><th>Status</th></tr></thead><tbody><tr><td class="cell-strong">Rangkaian Transit Nasional<span class="cell-sub">STL-20261123-RTN</span></td><td class="num"><span class="amount">RM 7,842.60</span></td><td class="num"><span class="amount">RM 7,842.60</span></td><td class="num diff-zero">RM 0.00</td><td><span class="badge badge--success">Matched</span></td></tr><tr><td class="cell-strong">Ekspres Rail Malaysia<span class="cell-sub">STL-20261123-ERM</span></td><td class="num"><span class="amount">RM 4,318.40</span></td><td class="num"><span class="amount">RM 4,318.40</span></td><td class="num diff-zero">RM 0.00</td><td><span class="badge badge--success">Matched</span></td></tr><tr><td class="cell-strong">Metro Lintas Bandar<span class="cell-sub">STL-20261123-MLB</span></td><td class="num"><span class="amount">RM 4,899.80</span></td><td class="num"><span class="amount">RM 4,905.30</span></td><td class="num diff-pos">RM 5.50</td><td><span class="badge badge--warning">Discrepancy</span></td></tr><tr><td class="cell-strong">Transit Aliran Ringan<span class="cell-sub">STL-20261123-TAR</span></td><td class="num"><span class="amount">RM 1,395.00</span></td><td class="num"><span class="amount">RM 1,396.00</span></td><td class="num diff-pos">RM 1.00</td><td><span class="badge badge--warning">Discrepancy</span></td></tr></tbody></table></div></div><div class="card__foot"><span>2 matched · 2 discrepancies</span><span>Net difference: <strong>RM 6.50</strong></span></div></section>
+  </div>
+
+  <div class="stack">
+    <section class="card metric--teal"><div class="card__head"><div><h2 class="card__title">Collection mix</h2></div></div><div class="card__body">
+      <div class="stack stack--sm">
+        <div>
+          <div class="inline-list" style="justify-content:space-between">
+            <span class="text-sm">Rangkaian Transit Nasional</span>
+            <span class="text-sm cell-strong">42.5%</span></div>
+          <div class="lanes__track" style="background:#eef2f7;margin-top:5px">
+            <div class="lanes__fill" style="width:42.5%"></div></div>
+        </div>
+        <div>
+          <div class="inline-list" style="justify-content:space-between">
+            <span class="text-sm">Metro Lintas Bandar</span>
+            <span class="text-sm cell-strong">26.6%</span></div>
+          <div class="lanes__track" style="background:#eef2f7;margin-top:5px">
+            <div class="lanes__fill" style="width:26.6%"></div></div>
+        </div>
+        <div>
+          <div class="inline-list" style="justify-content:space-between">
+            <span class="text-sm">Ekspres Rail Malaysia</span>
+            <span class="text-sm cell-strong">23.4%</span></div>
+          <div class="lanes__track" style="background:#eef2f7;margin-top:5px">
+            <div class="lanes__fill" style="width:23.4%"></div></div>
+        </div>
+        <div>
+          <div class="inline-list" style="justify-content:space-between">
+            <span class="text-sm">Transit Aliran Ringan</span>
+            <span class="text-sm cell-strong">7.5%</span></div>
+          <div class="lanes__track" style="background:#eef2f7;margin-top:5px">
+            <div class="lanes__fill" style="width:7.5%"></div></div>
+        </div>
+      </div>
+      <p class="hint mt-2">Share of gross fare collection by operator.</p></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Reconciliation status</h2></div></div><div class="card__body"><dl class="kv "><div><dt>Operators reconciled</dt><dd>4</dd></div><div><dt>Matched</dt><dd>2</dd></div><div><dt>With discrepancy</dt><dd>2</dd></div><div><dt>Largest difference</dt><dd>RM 5.50</dd></div><div><dt>Net difference</dt><dd>RM 6.50</dd></div><div><dt>Cut-off</dt><dd>23 Nov 2026 · 23:59</dd></div><div><dt>Status</dt><dd><span class="badge badge--warning">Pending review</span></dd></div></dl></div><div class="card__foot"><a class="card__link" href="reconciliation.html">Open reconciliation →</a></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Clearing cycle</h2></div></div><div class="card__body">
+      <div class="timeline">
+        <div class="timeline__item">
+          <span class="timeline__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg></span>
+          <div><p class="timeline__title">Gate transactions captured</p>
+            <p class="timeline__meta">05:00 – 23:59 · streaming</p></div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__dot"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg></span>
+          <div><p class="timeline__title">Batch total computed</p>
+            <p class="timeline__meta">23:59 · per operator</p></div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__dot timeline__dot--muted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg></span>
+          <div><p class="timeline__title">Operator settlement received</p>
+            <p class="timeline__meta">Next working day · 09:00</p></div>
+        </div>
+        <div class="timeline__item">
+          <span class="timeline__dot timeline__dot--muted"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10"/><path d="m5 8 4 6H1l4-6Z"/><path d="m19 8 4 6h-8l4-6Z"/><path d="M5 8h14"/></svg></span>
+          <div><p class="timeline__title">Discrepancy review</p>
+            <p class="timeline__meta">Within 3 working days</p></div>
+        </div>
+      </div></div></section>
+
+    <div class="alert alert--warning"><svg class="alert__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19L12 3Z"/><path d="M12 9v4M12 17h.01"/></svg><div><strong>Demonstration only</strong> Every figure on this dashboard is fixed demonstration data. No records are aggregated and no settlement is calculated.</div></div>
+  </div>
+</div>
+  </main>
+  <footer class="footer">
+    <span>© 2026 AFC System · Rangkaian Transit Nasional — front-end prototype. All records are fictional sample data.</span>
+    <span class="footer__links"><a href="../pages/passenger-dashboard.html">Passenger Portal</a><a href="../pages/media-processing.html">Media Processing</a><a href="../pages/gate-control.html">Gate Control</a><a href="../pages/fare-management.html">Fare Management</a><a href="../pages/clearing-house.html">Clearing House</a><a href="../index.html">Home</a></span>
+  </footer>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Passenger Dashboard · AFC System</title>
+<meta name="description" content="Automated Fare Collection & Access Control System — front-end prototype for Rangkaian Transit Nasional. Static demonstration data only.">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar__top">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Z"/><path d="M4 10h16M9 13h.01M15 13h.01"/><path d="m7 17-2 4M17 17l2 4"/></svg></span>
+        <span>
+          <span class="brand__name">AFC System</span>
+          <span class="brand__sub">Passenger Portal</span>
+        </span>
+      </a>
+    </div>
+    <div class="sidebar__rule"></div>
+    <div class="nav-group">
+      <span class="nav-group__label">Passenger Portal</span>
+      <nav class="nav" aria-label="Passenger Portal navigation">
+        <li><a href="passenger-dashboard.html" class="is-active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Dashboard</span></a></li>
+        <li><a href="my-tickets.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a3 3 0 0 0 0 6v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a3 3 0 0 0 0-6Z"/><path d="M13 5v2M13 11v2M13 17v2"/></svg><span>My Tickets</span></a></li>
+        <li><a href="wallet.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M3 10h18"/><path d="M16 14h2"/></svg><span>My Wallet</span></a></li>
+        <li><a href="topup-history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg><span>Top-up History</span></a></li>
+        <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 17l-5-5 5-5"/><path d="M5 12h11"/></svg><span>Logout</span></a></li>
+      </nav>
+    </div>
+    <div class="sidebar__foot">
+      <details class="module-switch">
+        <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg> Switch module <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <ul>
+        <li><a href="../pages/passenger-dashboard.html" style="color:#7fd8cb;font-weight:600">Passenger Portal<span class="sr-only"> — Aizat</span></a></li><li><a href="../pages/media-processing.html">Media Processing<span class="sr-only"> — Mirul</span></a></li><li><a href="../pages/gate-control.html">Gate Control<span class="sr-only"> — Gate Control</span></a></li><li><a href="../pages/fare-management.html">Fare Management<span class="sr-only"> — Ile</span></a></li><li><a href="../pages/clearing-house.html">Clearing House<span class="sr-only"> — Harith Hakim</span></a></li><li><a href="../index.html">Prototype home</a></li>
+        </ul>
+      </details>
+      <div class="sidebar__meta"><span class="dot"></span> Static prototype · v1.0</div>
+    </div>
+  </aside>
+  <div class="main" id="main">
+  <header class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="crumbs__sep" aria-hidden="true">/</span><a href="passenger-dashboard.html">Passenger</a><span class="crumbs__sep" aria-hidden="true">/</span><span class="crumbs__current" aria-current="page">Dashboard</span>
+    </nav>
+    <div class="topbar__meta">
+      <span class="pill pill--demo" title="This build is a static front-end prototype">
+        <span class="pill__dot" aria-hidden="true"></span><span class="pill__text">Demo data</span>
+      </span>
+      <span class="pill topbar__clock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>23 Nov 2026 · 09:42 MYT</span>
+      <div class="user">
+        <span class="avatar" aria-hidden="true">NA</span>
+        <span class="user__text">
+          <span class="user__name">Nurul Aisyah</span>
+          <span class="user__role">Passenger · PSG-2026-004178</span>
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="content" id="main">
+    <div class="page-head">
+      <div>
+        <p class="eyebrow">Member 1 · Passenger Portal <span class="eyebrow__sep">/</span> <span class="eyebrow__muted">PSG-2026-004178</span></p>
+        <h1 class="page-title">Passenger Dashboard</h1>
+        <p class="page-sub">Welcome back, Nurul. Here is your travel account at a glance.</p>
+      </div>
+      <div class="page-actions"><a class="btn btn--outline" href="my-tickets.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a3 3 0 0 0 0 6v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a3 3 0 0 0 0-6Z"/><path d="M13 5v2M13 11v2M13 17v2"/></svg> My tickets</a><a class="btn btn--primary" href="wallet.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M3 10h18"/><path d="M16 14h2"/></svg> Top up wallet</a></div>
+    </div>
+    <div class="banner mt-0" style="margin-bottom:18px">
+      <img src="../assets/images/platform-banner.svg" width="800" height="200"
+           alt="Illustration of a rail platform with a train, canopy and platform edge markings at Subang Jaya.">
+      <div class="banner__overlay">
+        <div>
+          <p class="banner__title">Platform 2 · Subang Jaya</p>
+          <p class="banner__sub">Your usual evening interchange · 4 services per hour</p>
+        </div>
+        <span class="badge badge--success">Service normal</span>
+      </div>
+    </div><div class="grid grid--metrics">
+      <div class="metric metric--navy"><p class="metric__label">Wallet balance</p><p class="metric__value">RM 68.40</p><p class="metric__foot">Last top-up RM 50.00 · 21 Nov 2026</p></div>
+      <div class="metric "><p class="metric__label">Total trips</p><p class="metric__value">214</p><p class="metric__foot">Since 14 Jan 2026 · 9 months</p></div>
+      <div class="metric "><p class="metric__label">This month</p><p class="metric__value">38</p><p class="metric__foot">Passes used 22 of 30 days</p></div>
+      <div class="metric metric--ok"><p class="metric__label">Account status</p><p class="metric__value">Active</p><p class="metric__foot">Verified · PSG-2026-004178</p></div>
+    </div>
+
+<div class="grid grid--sidebar mt-2">
+  <div class="stack">
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Recent wallet activity</h2><p class="card__sub">Fares deducted on exit and wallet top-ups, newest first.</p></div><div class="btn-row"><a class="card__link" href="topup-history.html">View all records →</a></div></div><div class="card__body card__body--tight"><div class="table-wrap"><table class="table "><thead><tr><th>Transaction</th><th>Date &amp; time</th><th>Description</th><th class="num">Amount</th><th>Status</th></tr></thead><tbody><tr><td><span class="cell-id">TXN-2026-11-23-1041</span></td><td class="cell-muted nowrap">23 Nov 2026 · 08:41</td><td>Fare · KL Sentral → Subang Jaya</td><td class="num"><span class="amount amount--debit ">−2.60</span></td><td><span class="badge badge--success">Completed</span></td></tr><tr><td><span class="cell-id">TXN-2026-11-22-0876</span></td><td class="cell-muted nowrap">22 Nov 2026 · 18:12</td><td>Fare · KL Sentral → Shah Alam</td><td class="num"><span class="amount amount--debit ">−3.40</span></td><td><span class="badge badge--success">Completed</span></td></tr><tr><td><span class="cell-id">TOP-2026-11-21-0092</span></td><td class="cell-muted nowrap">21 Nov 2026 · 19:42</td><td>Wallet top-up · FPX</td><td class="num"><span class="amount amount--credit ">+50.00</span></td><td><span class="badge badge--success">Completed</span></td></tr><tr><td><span class="cell-id">TXN-2026-11-21-0512</span></td><td class="cell-muted nowrap">21 Nov 2026 · 07:58</td><td>Fare · Subang Jaya → KL Sentral</td><td class="num"><span class="amount amount--debit ">−2.60</span></td><td><span class="badge badge--success">Completed</span></td></tr></tbody></table></div></div><div class="card__foot"><span>Showing 4 of 63 wallet movements</span><span>Balance after last movement: <strong><span class="amount">RM 68.40</span></strong></span></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Recent travel history</h2><p class="card__sub">Entry and exit records captured by the gate control module.</p></div></div><div class="card__body card__body--tight"><div class="table-wrap"><table class="table " style="min-width:760px"><thead><tr><th>Date</th><th>Journey time</th><th>Route</th><th class="num">Duration</th><th class="num">Distance</th><th class="num">Fare</th><th>Status</th></tr></thead><tbody><tr><td class="nowrap">23 Nov 2026</td><td class="nowrap"><span class="cell-strong">08:14</span><span class="cell-sub">to 08:41</span></td><td>KL Sentral<span class="cell-sub">to Subang Jaya</span></td><td class="num">27 min</td><td class="num">18.6 km</td><td class="num"><span class="amount">RM 2.60</span></td><td><span class="badge badge--success">Completed</span></td></tr><tr><td class="nowrap">22 Nov 2026</td><td class="nowrap"><span class="cell-strong">17:48</span><span class="cell-sub">to 18:12</span></td><td>KL Sentral<span class="cell-sub">to Shah Alam</span></td><td class="num">24 min</td><td class="num">25.4 km</td><td class="num"><span class="amount">RM 3.40</span></td><td><span class="badge badge--success">Completed</span></td></tr><tr><td class="nowrap">21 Nov 2026</td><td class="nowrap"><span class="cell-strong">07:31</span><span class="cell-sub">to 07:58</span></td><td>Subang Jaya<span class="cell-sub">to KL Sentral</span></td><td class="num">27 min</td><td class="num">18.6 km</td><td class="num"><span class="amount">RM 2.60</span></td><td><span class="badge badge--success">Completed</span></td></tr><tr><td class="nowrap">20 Nov 2026</td><td class="nowrap"><span class="cell-strong">18:02</span><span class="cell-sub">to 18:39</span></td><td>KL Sentral<span class="cell-sub">to Klang</span></td><td class="num">37 min</td><td class="num">33.2 km</td><td class="num"><span class="amount">RM 4.20</span></td><td><span class="badge badge--success">Completed</span></td></tr><tr><td class="nowrap">19 Nov 2026</td><td class="nowrap"><span class="cell-strong">08:07</span><span class="cell-sub">to 08:29</span></td><td>KL Sentral<span class="cell-sub">to KLCC</span></td><td class="num">22 min</td><td class="num">6.4 km</td><td class="num"><span class="amount">RM 1.40</span></td><td><span class="badge badge--success">Completed</span></td></tr></tbody></table></div></div><div class="card__foot"><span>Showing 5 of 214 completed trips</span><a class="card__link" href="my-tickets.html">Open my tickets →</a></div></section>
+  </div>
+
+  <div class="stack">
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Passenger profile</h2></div><div class="btn-row"><a class="btn btn--outline btn--sm" href="register.html">Edit</a></div></div><div class="card__body"><div class="passport">
+      <span class="passport__avatar" aria-hidden="true">NA</span>
+      <div>
+        <p class="passport__name">Nurul Aisyah binti Rahman</p>
+        <p class="passport__meta">PSG-2026-004178 · 010214-14-5583</p>
+      </div>
+    </div>
+    <dl class="kv "><div><dt>Account status</dt><dd><span class="badge badge--success">Active</span></dd></div><div><dt>Fare product</dt><dd>Adult · Monthly Pass</dd></div><div><dt>Travel card</dt><dd class="mono">AFC-CARD-4401982</dd></div><div><dt>Member since</dt><dd>14 Jan 2026</dd></div><div><dt>Registered email</dt><dd>aisyah.rahman@example.my</dd></div><div><dt>Mobile number</dt><dd>+60 12-734 8891</dd></div></dl></div><div class="card__foot"><span>Passenger ID</span><span class="mono">PSG-2026-004178</span></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Wallet</h2></div></div><div class="card__body">
+      <p class="mini-label">Available balance</p>
+      <p class="metric__value" style="margin-top:4px">RM 68.40</p>
+      <p class="hint mt-1">Auto top-up triggers below RM 10.00.</p>
+      <div class="btn-row mt-2">
+        <a class="btn btn--primary btn--sm" href="wallet.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Top up</a>
+        <a class="btn btn--outline btn--sm" href="wallet.html">Wallet details</a>
+      </div></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">My tickets</h2></div></div><div class="card__body">
+      <div class="inline-list" style="justify-content:space-between">
+        <span class="media-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a3 3 0 0 0 0 6v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a3 3 0 0 0 0-6Z"/><path d="M13 5v2M13 11v2M13 17v2"/></svg> Monthly Pass</span>
+        <span class="badge badge--success">Active</span>
+      </div>
+      <p class="hint mt-2">Valid 01 Nov – 30 Nov 2026 · Zones 1–3</p>
+      <div class="btn-row mt-2">
+        <a class="btn btn--outline btn--sm" href="my-tickets.html">All tickets</a>
+        <a class="btn btn--ghost btn--sm" href="passenger-ticket.html">View QR ticket →</a>
+      </div></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Need help?</h2></div></div><div class="card__body"><p class="hint">Gate did not open, or a fare looks wrong? Quote your
+      transaction ID at any staffed counter. Refunds are processed by the operator and
+      reconciled the next working day.</p>
+      <p class="hint mt-2"><strong>Hotline</strong> 1-300-88-2233 · 7am – 11pm daily</p></div></section>
+  </div>
+</div>
+
+<p class="panel-note mt-2"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v5M12 8h.01"/></svg>This dashboard is populated with fixed demonstration
+records. Wallet balances, trip counts and gate activity are static sample values and do not change
+when you navigate between pages.</p>
+  </main>
+  <footer class="footer">
+    <span>© 2026 AFC System · Rangkaian Transit Nasional — front-end prototype. All records are fictional sample data.</span>
+    <span class="footer__links"><a href="../pages/passenger-dashboard.html">Passenger Portal</a><a href="../pages/media-processing.html">Media Processing</a><a href="../pages/gate-control.html">Gate Control</a><a href="../pages/fare-management.html">Fare Management</a><a href="../pages/clearing-house.html">Clearing House</a><a href="../index.html">Home</a></span>
+  </footer>
+  </div>
+</div>
+</body>
+</html>

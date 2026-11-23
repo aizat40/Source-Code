@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sign in · AFC System</title>
+<meta name="description" content="Passenger sign-in for the AFC System front-end prototype.">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="is-auth">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="auth">
+  <!-- Member 1 · Aizat — passenger authentication (visual only) -->
+  <aside class="auth__aside">
+    <span class="auth__badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 3v6c0 5-3.4 8-8 9-4.6-1-8-4-8-9V6l8-3Z"/><path d="m9 12 2 2 4-4"/></svg> Central Clearing ready</span>
+    <div>
+      <h1 class="auth__headline">One account for every journey on the network.</h1>
+      <p class="auth__lede">Automated Fare Collection & Access Control System for Rangkaian Transit Nasional. Sign in to manage your
+        stored-value wallet, monthly passes and travel history.</p>
+      <ul class="auth__list">
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span>Tap in with an NFC card, mobile QR or paper barcode at any gate.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span>Fares are deducted automatically on exit, based on distance travelled.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span>Top up by FPX, debit card or e-wallet and travel the same day.</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m4 12 5 5L20 6"/></svg><span>Every trip is reconciled daily by the Central Clearing House.</span></li>
+      </ul>
+    </div>
+    <p class="auth__foot"><span>Prototype build 1.0</span><span>16 pages · 5 modules</span><span>No live authentication</span></p>
+  </aside>
+
+  <main class="auth__main" id="main">
+    <div class="auth__card">
+      <a class="auth__brand" href="../index.html">
+        <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Z"/><path d="M4 10h16M9 13h.01M15 13h.01"/><path d="m7 17-2 4M17 17l2 4"/></svg></span>
+        <span>
+          <span class="auth__brand-text">AFC System</span>
+          <span class="auth__brand-sub">Passenger Portal</span>
+        </span>
+      </a>
+
+      <h2 class="auth__title">Sign in to your account</h2>
+      <p class="auth__sub">Enter the email address registered with your AFC travel card.</p>
+
+      <form class="auth__form" action="passenger-dashboard.html" method="get">
+        <div class="field"><label for="login-email">Email address<span class="req" aria-hidden="true">*</span></label><input class="input" type="email" id="login-email" name="email" value="aisyah.rahman@example.my" placeholder="aisyah.rahman@example.my" autocomplete="username" required></div>
+        <div class="field"><label for="login-password">Password<span class="req" aria-hidden="true">*</span></label><input class="input" type="password" id="login-password" name="password" placeholder="Enter your password" autocomplete="current-password" required></div>
+        <div class="auth__meta">
+          <label class="check"><input type="checkbox" name="remember" checked><span>Remember me on this device</span></label>
+          <a href="login.html">Forgot password?</a>
+        </div>
+        <button class="btn btn--primary btn--lg btn--block" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15M13 6l6 6-6 6"/></svg> Sign in</button>
+      </form>
+
+      <p class="auth__switch">New to the network? <a href="register.html">Create a passenger account</a></p>
+
+      <p class="auth__note"><strong>Demonstration only.</strong> Sign-in is not authenticated in this
+        phase. Submitting the form opens the passenger dashboard so the prototype can be demonstrated
+        without a backend. Operator modules are reached from the module switcher.</p>
+
+      <nav class="auth__modules" aria-label="Prototype modules">
+        <span class="auth__modules-label">Explore the prototype</span>
+        <a href="passenger-dashboard.html">Passenger</a>
+        <a href="media-processing.html">Media</a>
+        <a href="gate-control.html">Gates</a>
+        <a href="fare-management.html">Fares</a>
+        <a href="clearing-house.html">Clearing</a>
+      </nav>
+    </div>
+  </main>
+</div>
+</body>
+</html>

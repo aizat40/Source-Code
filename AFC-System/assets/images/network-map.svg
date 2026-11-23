@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500" role="img" aria-labelledby="t d">
+  <title id="t">Network route diagram</title>
+  <desc id="d">Schematic of three transit lines crossing at KL Sentral, with station markers and line labels.</desc>
+
+  <defs>
+    <pattern id="nmgrid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M40 0H0V40" fill="none" stroke="#e2e8f0" stroke-width="1"/>
+    </pattern>
+    <style>
+      .st { fill:#ffffff; stroke-width:4; }
+      .lbl { font-family:"Segoe UI",Arial,sans-serif; font-size:13px; font-weight:600; fill:#1e293b; }
+      .lbl-s { font-family:"Segoe UI",Arial,sans-serif; font-size:11px; font-weight:500; fill:#5a6b80; }
+      .tag { font-family:"Segoe UI",Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.08em; fill:#ffffff; }
+      .head { font-family:"Segoe UI",Arial,sans-serif; font-size:15px; font-weight:700; fill:#142b45; letter-spacing:-.01em; }
+    </style>
+  </defs>
+
+  <rect width="800" height="500" fill="#f7fafc"/>
+  <rect width="800" height="500" fill="url(#nmgrid)"/>
+
+  <!-- Line 1: Komuter (teal, horizontal) -->
+  <path d="M60 300H740" stroke="#0f766e" stroke-width="9" stroke-linecap="round" fill="none"/>
+
+  <!-- Line 2: Intercity (navy, diagonal) -->
+  <path d="M150 440L400 300L660 120" stroke="#142b45" stroke-width="9"
+        stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+
+  <!-- Line 3: LRT (amber, short spur) -->
+  <path d="M560 300V150" stroke="#f59e0b" stroke-width="7" stroke-linecap="round" fill="none"/>
+
+  <!-- Line 1 stations -->
+  <circle class="st" cx="130" cy="300" r="7" stroke="#0f766e"/>
+  <circle class="st" cx="270" cy="300" r="7" stroke="#0f766e"/>
+  <circle class="st" cx="400" cy="300" r="11" stroke="#142b45"/>
+  <circle class="st" cx="400" cy="300" r="4" fill="#142b45"/>
+  <circle class="st" cx="530" cy="300" r="7" stroke="#0f766e"/>
+  <circle class="st" cx="640" cy="300" r="7" stroke="#0f766e"/>
+
+  <!-- Line 2 stations -->
+  <circle class="st" cx="196" cy="412" r="7" stroke="#142b45"/>
+  <circle class="st" cx="278" cy="366" r="7" stroke="#142b45"/>
+  <circle class="st" cx="520" cy="203" r="7" stroke="#142b45"/>
+  <circle class="st" cx="600" cy="155" r="7" stroke="#142b45"/>
+
+  <!-- Line 3 station -->
+  <circle class="st" cx="560" cy="150" r="7" stroke="#f59e0b"/>
+
+  <!-- Platform ticks on the horizontal line -->
+  <g stroke="#94a3b8" stroke-width="2">
+    <path d="M100 300v-9M170 300v-9M240 300v-9M310 300v-9M470 300v-9M500 300v-9M570 300v-9M610 300v-9M670 300v-9M700 300v-9"/>
+  </g>
+
+  <!-- Station labels -->
+  <text class="lbl" x="130" y="330" text-anchor="middle">Klang</text>
+  <text class="lbl" x="270" y="330" text-anchor="middle">Shah Alam</text>
+  <text class="lbl" x="400" y="330" text-anchor="middle">KL Sentral</text>
+  <text class="lbl" x="530" y="330" text-anchor="middle">KLCC</text>
+  <text class="lbl" x="640" y="330" text-anchor="middle">Ampang</text>
+
+  <text class="lbl-s" x="196" y="436" text-anchor="middle">Tanjung Malim</text>
+  <text class="lbl-s" x="278" y="392" text-anchor="middle">Sungai Buloh</text>
+  <text class="lbl-s" x="520" y="180" text-anchor="middle">Subang Jaya</text>
+  <text class="lbl-s" x="600" y="140" text-anchor="middle">Kepong</text>
+  <text class="lbl-s" x="560" y="130" text-anchor="middle">Petaling Jaya</text>
+
+  <!-- Line chips -->
+  <g>
+    <rect x="60" y="46" width="112" height="24" rx="12" fill="#0f766e"/>
+    <text class="tag" x="80" y="62">KOMUTER</text>
+    <rect x="182" y="46" width="112" height="24" rx="12" fill="#142b45"/>
+    <text class="tag" x="200" y="62">INTERCITY</text>
+    <rect x="304" y="46" width="82" height="24" rx="12" fill="#f59e0b"/>
+    <text class="tag" x="320" y="62" fill="#4a3005">LRT</text>
+  </g>
+
+  <text class="head" x="60" y="32">Network route diagram</text>
+
+  <!-- Legend -->
+  <g transform="translate(60,456)">
+    <circle cx="6" cy="6" r="6" fill="#fff" stroke="#142b45" stroke-width="2.5"/>
+    <text class="lbl-s" x="20" y="10">Station</text>
+    <circle cx="106" cy="6" r="6" fill="#fff" stroke="#142b45" stroke-width="2.5"/>
+    <circle cx="106" cy="6" r="2.5" fill="#142b45"/>
+    <text class="lbl-s" x="120" y="10">Interchange</text>
+  </g>
+</svg>

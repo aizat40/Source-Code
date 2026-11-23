@@ -1,0 +1,125 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" width="640" height="400" role="img" aria-labelledby="t d">
+  <title id="t">Station gate concourse</title>
+  <desc id="d">Illustration of an access-control gate bank with fare readers, barrier arms and signage above the concourse.</desc>
+
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#eef3f8"/><stop offset="1" stop-color="#dfe8f1"/>
+    </linearGradient>
+    <linearGradient id="floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#cdd9e5"/><stop offset="1" stop-color="#e8eef4"/>
+    </linearGradient>
+    <linearGradient id="cab" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2b5074"/><stop offset="1" stop-color="#142b45"/>
+    </linearGradient>
+    <pattern id="armg" width="28" height="12" patternUnits="userSpaceOnUse">
+      <rect width="28" height="12" fill="#ffffff"/>
+      <rect width="14" height="12" fill="#16a34a"/>
+    </pattern>
+    <pattern id="armr" width="28" height="12" patternUnits="userSpaceOnUse">
+      <rect width="28" height="12" fill="#ffffff"/>
+      <rect width="14" height="12" fill="#dc2626"/>
+    </pattern>
+    <style>
+      .sg { font-family:"Segoe UI",Arial,sans-serif; font-size:11px; font-weight:700; letter-spacing:.07em; fill:#5a6b80; }
+      .sgb { font-family:"Segoe UI",Arial,sans-serif; font-size:13px; font-weight:700; fill:#ffffff; letter-spacing:.04em; }
+      .floorline { stroke:#c3d0dd; stroke-width:1; }
+      .aisle { stroke:#0f766e; stroke-width:2; stroke-dasharray:8 7; opacity:.4; }
+    </style>
+  </defs>
+
+  <rect width="640" height="400" fill="url(#wall)"/>
+
+  <!-- Ceiling beam -->
+  <path d="M0 40H640" stroke="#c3d0dd" stroke-width="3"/>
+
+  <!-- Suspended sign, hung from the ceiling on two rods -->
+  <g stroke="#94a3b8" stroke-width="2">
+    <path d="M250 40v18M390 40v18"/>
+  </g>
+  <rect x="196" y="58" width="248" height="44" rx="5" fill="#142b45"/>
+  <text class="sgb" x="320" y="86" text-anchor="middle">CONCOURSE A · ENTRY</text>
+
+  <!-- Floor -->
+  <path d="M0 300H640V400H0Z" fill="url(#floor)"/>
+  <g class="floorline">
+    <path d="M0 324H640M0 350H640M0 378H640"/>
+  </g>
+
+  <!-- Aisle guides, centred in each gap between cabinets -->
+  <g class="aisle">
+    <path d="M227 300v100M411 300v100"/>
+  </g>
+
+  <!-- Back wall panel lines -->
+  <g stroke="#d3dfe9" stroke-width="1">
+    <path d="M60 150v150M150 150v150M232 150v150M408 150v150M490 150v150M580 150v150"/>
+  </g>
+
+  <!-- Gate bank: three cabinets with barrier arms -->
+  <g>
+    <!-- Cabinet 1 -->
+    <rect x="112" y="196" width="46" height="104" rx="5" fill="url(#cab)"/>
+    <rect x="120" y="208" width="30" height="22" rx="3" fill="#0f766e"/>
+    <circle cx="135" cy="219" r="4.5" fill="#7fd8cb"/>
+    <rect x="120" y="240" width="30" height="8" rx="2" fill="#3d6188" opacity=".8"/>
+    <rect x="120" y="254" width="30" height="8" rx="2" fill="#3d6188" opacity=".55"/>
+    <!-- raised arm, striped -->
+    <g transform="rotate(-58 158 210)">
+      <rect x="158" y="204" width="138" height="12" rx="2" fill="url(#armg)"
+            stroke="#94a3b8" stroke-width=".8"/>
+    </g>
+    <circle cx="158" cy="210" r="5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+
+    <!-- Cabinet 2 -->
+    <rect x="296" y="196" width="46" height="104" rx="5" fill="url(#cab)"/>
+    <rect x="304" y="208" width="30" height="22" rx="3" fill="#0f766e"/>
+    <circle cx="319" cy="219" r="4.5" fill="#7fd8cb"/>
+    <rect x="304" y="240" width="30" height="8" rx="2" fill="#3d6188" opacity=".8"/>
+    <rect x="304" y="254" width="30" height="8" rx="2" fill="#3d6188" opacity=".55"/>
+    <!-- closed arm, striped, spans the aisle -->
+    <rect x="342" y="204" width="138" height="12" rx="2" fill="url(#armr)"
+          stroke="#94a3b8" stroke-width=".8"/>
+    <circle cx="342" cy="210" r="5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+
+    <!-- Cabinet 3 -->
+    <rect x="480" y="196" width="46" height="104" rx="5" fill="url(#cab)"/>
+    <rect x="488" y="208" width="30" height="22" rx="3" fill="#0f766e"/>
+    <circle cx="503" cy="219" r="4.5" fill="#7fd8cb"/>
+    <rect x="488" y="240" width="30" height="8" rx="2" fill="#3d6188" opacity=".8"/>
+    <rect x="488" y="254" width="30" height="8" rx="2" fill="#3d6188" opacity=".55"/>
+    <g transform="rotate(-58 526 210)">
+      <rect x="526" y="204" width="104" height="12" rx="2" fill="url(#armg)"
+            stroke="#94a3b8" stroke-width=".8"/>
+    </g>
+    <circle cx="526" cy="210" r="5" fill="#e2e8f0" stroke="#94a3b8" stroke-width="1"/>
+  </g>
+
+  <!-- Plinths -->
+  <g fill="#33506e">
+    <rect x="106" y="300" width="58" height="9" rx="2"/>
+    <rect x="290" y="300" width="58" height="9" rx="2"/>
+    <rect x="474" y="300" width="58" height="9" rx="2"/>
+  </g>
+
+  <!-- Queue guidance on floor, aligned to gate centres -->
+  <g stroke="#0f766e" stroke-width="2" opacity=".5" stroke-dasharray="7 6">
+    <path d="M135 330v30M319 330v30M503 330v30"/>
+  </g>
+
+  <!-- Labels, centred over each cabinet -->
+  <text class="sg" x="135" y="170" text-anchor="middle">GATE A01</text>
+  <text class="sg" x="319" y="170" text-anchor="middle">GATE A02</text>
+  <text class="sg" x="503" y="170" text-anchor="middle">GATE A03</text>
+
+  <!-- Status legend: gate state and device state are distinct -->
+  <g>
+    <rect x="214" y="352" width="264" height="30" rx="15" fill="#ffffff" opacity=".94"/>
+    <circle cx="232" cy="367" r="4" fill="#16a34a"/>
+    <text class="sg" x="244" y="371">2 open</text>
+    <circle cx="310" cy="367" r="4" fill="#dc2626"/>
+    <text class="sg" x="322" y="371">1 closed</text>
+    <circle cx="396" cy="367" r="4" fill="#3d6188"/>
+    <text class="sg" x="408" y="371">3 online</text>
+  </g>
+</svg>

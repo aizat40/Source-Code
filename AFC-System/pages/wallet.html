@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Wallet & Top-up · AFC System</title>
+<meta name="description" content="Automated Fare Collection & Access Control System — front-end prototype for Rangkaian Transit Nasional. Static demonstration data only.">
+<link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body class="">
+<a class="skip-link" href="#main">Skip to main content</a>
+<div class="app">
+  <aside class="sidebar">
+    <div class="sidebar__top">
+      <a class="brand" href="../index.html">
+        <span class="brand__mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h12a2 2 0 0 1 2 2v9a3 3 0 0 1-3 3H7a3 3 0 0 1-3-3V5a2 2 0 0 1 2-2Z"/><path d="M4 10h16M9 13h.01M15 13h.01"/><path d="m7 17-2 4M17 17l2 4"/></svg></span>
+        <span>
+          <span class="brand__name">AFC System</span>
+          <span class="brand__sub">Passenger Portal</span>
+        </span>
+      </a>
+    </div>
+    <div class="sidebar__rule"></div>
+    <div class="nav-group">
+      <span class="nav-group__label">Passenger Portal</span>
+      <nav class="nav" aria-label="Passenger Portal navigation">
+        <li><a href="passenger-dashboard.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg><span>Dashboard</span></a></li>
+        <li><a href="my-tickets.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v2a3 3 0 0 0 0 6v2a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-2a3 3 0 0 0 0-6Z"/><path d="M13 5v2M13 11v2M13 17v2"/></svg><span>My Tickets</span></a></li>
+        <li><a href="wallet.html" class="is-active" aria-current="page"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M3 10h18"/><path d="M16 14h2"/></svg><span>My Wallet</span></a></li>
+        <li><a href="topup-history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg><span>Top-up History</span></a></li>
+        <li><a href="../index.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 17l-5-5 5-5"/><path d="M5 12h11"/></svg><span>Logout</span></a></li>
+      </nav>
+    </div>
+    <div class="sidebar__foot">
+      <details class="module-switch">
+        <summary><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg> Switch module <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg></summary>
+        <ul>
+        <li><a href="../pages/passenger-dashboard.html" style="color:#7fd8cb;font-weight:600">Passenger Portal<span class="sr-only"> — Aizat</span></a></li><li><a href="../pages/media-processing.html">Media Processing<span class="sr-only"> — Mirul</span></a></li><li><a href="../pages/gate-control.html">Gate Control<span class="sr-only"> — Gate Control</span></a></li><li><a href="../pages/fare-management.html">Fare Management<span class="sr-only"> — Ile</span></a></li><li><a href="../pages/clearing-house.html">Clearing House<span class="sr-only"> — Harith Hakim</span></a></li><li><a href="../index.html">Prototype home</a></li>
+        </ul>
+      </details>
+      <div class="sidebar__meta"><span class="dot"></span> Static prototype · v1.0</div>
+    </div>
+  </aside>
+  <div class="main" id="main">
+  <header class="topbar">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="../index.html">Home</a><span class="crumbs__sep" aria-hidden="true">/</span><a href="passenger-dashboard.html">Passenger</a><span class="crumbs__sep" aria-hidden="true">/</span><span class="crumbs__current" aria-current="page">My Wallet</span>
+    </nav>
+    <div class="topbar__meta">
+      <span class="pill pill--demo" title="This build is a static front-end prototype">
+        <span class="pill__dot" aria-hidden="true"></span><span class="pill__text">Demo data</span>
+      </span>
+      <span class="pill topbar__clock"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 2"/></svg>23 Nov 2026 · 09:42 MYT</span>
+      <div class="user">
+        <span class="avatar" aria-hidden="true">NA</span>
+        <span class="user__text">
+          <span class="user__name">Nurul Aisyah</span>
+          <span class="user__role">Passenger · PSG-2026-004178</span>
+        </span>
+      </div>
+    </div>
+  </header>
+  <main class="content" id="main">
+    <div class="page-head">
+      <div>
+        <p class="eyebrow">Member 1 · Passenger Portal <span class="eyebrow__sep">/</span> <span class="eyebrow__muted">PSG-2026-004178</span></p>
+        <h1 class="page-title">My Wallet & Top-up</h1>
+        <p class="page-sub">Add credit to your stored-value wallet and review the payment methods linked to your account.</p>
+      </div>
+      <div class="page-actions"><a class="btn btn--outline" href="topup-history.html"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v5h5"/><path d="M12 8v4l3 2"/></svg> Top-up history</a></div>
+    </div>
+    <div class="grid grid--aside">
+  <div class="stack">
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Top up your travel wallet</h2><p class="card__sub">Funds are available at the gate immediately after a successful payment.</p></div></div><div class="card__body">
+      <form action="topup-history.html" method="get">
+        <div class="form-grid">
+          <div class="field field--full">
+            <span class="label">Select an amount</span>
+            <div class="presets"><label class="preset"><input type="radio" name="amount" value="10">
+        <span class="preset__amount">RM 10</span><span class="preset__label">Preset</span></label><label class="preset"><input type="radio" name="amount" value="20">
+        <span class="preset__amount">RM 20</span><span class="preset__label">Preset</span></label><label class="preset"><input type="radio" name="amount" value="50" checked>
+        <span class="preset__amount">RM 50</span><span class="preset__label">Most used</span></label><label class="preset"><input type="radio" name="amount" value="100">
+        <span class="preset__amount">RM 100</span><span class="preset__label">Preset</span></label></div>
+            <p class="hint">Preset amounts are credited instantly in the live system.</p>
+          </div>
+
+          <div class="field field--full"><label for="custom-amount">Custom amount</label><div class="input-group input-group--prefix"><span class="addon">RM</span><input class="input" type="number" id="custom-amount" name="custom" min="5" max="500" step="0.01" placeholder="0.00" inputmode="decimal"></div><p class="hint">Minimum RM 5.00 · maximum RM 500.00 per top-up.</p></div>
+
+          <div class="field field--full">
+            <span class="label">Payment method</span>
+            <div class="choice-set"><label class="choice"><input type="radio" name="method" value="fpx" checked>
+        <span class="choice__mark" aria-hidden="true"></span>
+        <span class="choice__text"><span class="choice__title">FPX Online Banking</span><span class="choice__sub">Maybank2u · CIMB · Public Bank</span></span></label><label class="choice"><input type="radio" name="method" value="card">
+        <span class="choice__mark" aria-hidden="true"></span>
+        <span class="choice__text"><span class="choice__title">Debit / Credit Card</span><span class="choice__sub">Visa · Mastercard · 3-D Secure</span></span></label><label class="choice"><input type="radio" name="method" value="ewallet">
+        <span class="choice__mark" aria-hidden="true"></span>
+        <span class="choice__text"><span class="choice__title">Touch 'n Go eWallet</span><span class="choice__sub">Scan or deep link</span></span></label></div>
+          </div>
+
+          <div class="form-divider"></div>
+
+          <div class="field"><label for="holder">Card / account holder</label><input class="input" type="text" id="holder" value="Nurul Aisyah binti Rahman" placeholder="As printed on the card"></div>
+          <div class="field"><label for="ref">Reference (optional)</label><input class="input" type="text" id="ref" value="" placeholder="e.g. family top-up"></div>
+
+          <div class="field field--full">
+            <label class="check"><input type="checkbox" checked>
+              <span>Save this payment method for faster top-up next time.</span></label>
+          </div>
+        </div>
+
+        <div class="form-actions">
+          <button class="btn btn--primary btn--lg" type="submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg> Top up wallet</button>
+          <button class="btn btn--outline btn--lg" type="reset">Clear</button>
+          <span class="demo-tag">Demo · no payment is processed</span>
+        </div>
+      </form></div><div class="card__foot"><span>Secured by 3-D Secure in the production system</span><span>FPX · Card · eWallet</span></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Recent top-up records</h2><p class="card__sub">The four most recent credits to this wallet.</p></div><div class="btn-row"><a class="card__link" href="topup-history.html">Full history →</a></div></div><div class="card__body card__body--tight"><div class="table-wrap"><table class="table " style="min-width:700px"><thead><tr><th>Transaction</th><th>Date &amp; time</th><th class="num">Amount</th><th>Payment method</th><th>Status</th></tr></thead><tbody><tr><td><span class="cell-id">TOP-2026-11-21-0092</span></td><td class="cell-muted nowrap">21 Nov 2026 · 19:42</td><td class="num"><span class="amount">RM 50.00</span></td><td>FPX Online Banking</td><td><span class="badge badge--success">Completed</span></td></tr><tr><td><span class="cell-id">TOP-2026-11-14-0671</span></td><td class="cell-muted nowrap">14 Nov 2026 · 08:05</td><td class="num"><span class="amount">RM 30.00</span></td><td>Debit Card ···· 4417</td><td><span class="badge badge--success">Completed</span></td></tr><tr><td><span class="cell-id">TOP-2026-11-02-0344</span></td><td class="cell-muted nowrap">02 Nov 2026 · 12:18</td><td class="num"><span class="amount">RM 100.00</span></td><td>FPX Online Banking</td><td><span class="badge badge--success">Completed</span></td></tr><tr><td><span class="cell-id">TOP-2026-10-26-0188</span></td><td class="cell-muted nowrap">26 Oct 2026 · 21:30</td><td class="num"><span class="amount">RM 20.00</span></td><td>Touch 'n Go eWallet</td><td><span class="badge badge--warning">Pending</span></td></tr></tbody></table></div></div><div class="card__foot"><span>Showing 4 of 6 records</span><span>Total credited: <strong>RM 210.00</strong></span></div></section>
+  </div>
+
+  <div class="stack">
+    <section class="card metric--teal"><div class="card__head"><div><h2 class="card__title">Current balance</h2></div></div><div class="card__body">
+      <img class="cardart" src="../assets/images/travel-card.svg" width="400" height="300"
+           alt="Illustration of the AFC stored-value travel card ending 982, held by Nurul Aisyah, balance RM 68.40.">
+      <p class="mini-label mt-2">Available to spend</p>
+      <p class="metric__value" style="font-size:34px;margin-top:4px">RM 68.40</p>
+      <p class="hint mt-1">Updated 23 Nov 2026 · 09:42</p>
+      <hr class="divider">
+      <dl class="kv "><div><dt>Pending top-ups</dt><dd>RM 20.00</dd></div><div><dt>Auto top-up</dt><dd>Off</dd></div><div><dt>Low balance alert</dt><dd>Below RM 10.00</dd></div><div><dt>Wallet status</dt><dd><span class="badge badge--success">Active</span></dd></div></dl>
+      <p class="hint mt-2">The balance above is available now and excludes the pending
+        top-up, which is credited once the gateway confirms the transfer.</p></div></section>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Top-up limits</h2></div></div><div class="card__body"><dl class="kv "><div><dt>Minimum per top-up</dt><dd>RM 5.00</dd></div><div><dt>Maximum per top-up</dt><dd>RM 500.00</dd></div><div><dt>Maximum wallet balance</dt><dd>RM 1,000.00</dd></div><div><dt>Daily top-up limit</dt><dd>RM 1,500.00</dd></div><div><dt>Refund processing</dt><dd>3 working days</dd></div></dl></div></section>
+
+    <div class="alert alert--warning"><svg class="alert__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3 2.5 20h19L12 3Z"/><path d="M12 9v4M12 17h.01"/></svg><div><strong>Demonstration only</strong> Top-ups in this prototype do not move money. The form is a static interface demonstration and no payment gateway is contacted.</div></div>
+
+    <section class="card "><div class="card__head"><div><h2 class="card__title">Payment methods on file</h2></div></div><div class="card__body">
+      <div class="inline-list" style="justify-content:space-between">
+        <span class="media-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/><path d="M6 15h4"/></svg> Maybank ···· 8842</span><span class="badge badge--success">Default</span>
+      </div>
+      <div class="inline-list mt-2" style="justify-content:space-between">
+        <span class="media-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2.5"/><path d="M2 10h20"/><path d="M6 15h4"/></svg> Visa ···· 4417</span><span class="badge badge--neutral">Saved</span>
+      </div>
+      <div class="inline-list mt-2" style="justify-content:space-between">
+        <span class="media-chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 8a2 2 0 0 1 2-2h13a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2Z"/><path d="M3 10h18"/><path d="M16 14h2"/></svg> TNG eWallet</span><span class="badge badge--neutral">Saved</span>
+      </div>
+      <button class="btn btn--outline btn--sm btn--block mt-2" type="button">+ Add payment method</button></div></section>
+  </div>
+</div>
+  </main>
+  <footer class="footer">
+    <span>© 2026 AFC System · Rangkaian Transit Nasional — front-end prototype. All records are fictional sample data.</span>
+    <span class="footer__links"><a href="../pages/passenger-dashboard.html">Passenger Portal</a><a href="../pages/media-processing.html">Media Processing</a><a href="../pages/gate-control.html">Gate Control</a><a href="../pages/fare-management.html">Fare Management</a><a href="../pages/clearing-house.html">Clearing House</a><a href="../index.html">Home</a></span>
+  </footer>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300" role="img" aria-labelledby="t d">
+  <title id="t">Travel card</title>
+  <desc id="d">Illustration of an AFC stored-value travel card with a chip, card number and contactless symbol.</desc>
+
+  <defs>
+    <linearGradient id="cardface" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#203e5d"/><stop offset="0.55" stop-color="#142b45"/>
+      <stop offset="1" stop-color="#0d1e31"/>
+    </linearGradient>
+    <linearGradient id="sheen" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffffff" stop-opacity=".16"/>
+      <stop offset="0.45" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="1" stop-color="#0f766e" stop-opacity=".3"/>
+    </linearGradient>
+    <linearGradient id="chipg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f6d98a"/><stop offset="1" stop-color="#c9a24a"/>
+    </linearGradient>
+    <style>
+      .ct { font-family:"Segoe UI",Arial,sans-serif; }
+      .ct-brand { font-size:15px; font-weight:700; fill:#ffffff; letter-spacing:.02em; }
+      .ct-sub { font-size:8.5px; font-weight:600; fill:#7fd8cb; letter-spacing:.14em; }
+      .ct-num { font-family:Consolas,monospace; font-size:13px; font-weight:600; fill:#ffffff; letter-spacing:.06em; }
+      .ct-lab { font-size:7.5px; font-weight:600; fill:#8fa6bd; letter-spacing:.12em; }
+      .ct-name { font-size:10.5px; font-weight:600; fill:#ffffff; }
+    </style>
+  </defs>
+
+  <rect width="400" height="300" fill="#f4f7fa"/>
+
+  <!-- Card shadow -->
+  <rect x="46" y="62" width="308" height="192" rx="16" fill="#142b45" opacity=".14"/>
+
+  <!-- Card body -->
+  <rect x="40" y="54" width="308" height="192" rx="16" fill="url(#cardface)"/>
+  <rect x="40" y="54" width="308" height="192" rx="16" fill="url(#sheen)"/>
+
+  <!-- Track motif -->
+  <g stroke="#ffffff" stroke-opacity=".07" stroke-width="1">
+    <path d="M40 120h308M40 150h308M40 180h308M40 210h308"/>
+  </g>
+
+  <!-- Chip -->
+  <g>
+    <rect x="66" y="92" width="38" height="29" rx="4" fill="url(#chipg)"/>
+    <g stroke="#a8842f" stroke-width="1.1" stroke-opacity=".85">
+      <path d="M66 101h38M66 111h38M79 92v29M91 92v29"/>
+    </g>
+  </g>
+
+  <!-- Contactless waves -->
+  <g stroke="#7fd8cb" stroke-width="2.4" fill="none" stroke-linecap="round">
+    <path d="M292 100a16 16 0 0 1 0 22"/>
+    <path d="M300 94a26 26 0 0 1 0 34"/>
+    <path d="M308 88a36 36 0 0 1 0 46"/>
+  </g>
+
+  <!-- Brand -->
+  <text class="ct ct-brand" x="66" y="70">AFC SYSTEM</text>
+  <text class="ct ct-sub" x="172" y="70">STORED VALUE</text>
+
+  <!-- Number -->
+  <text class="ct ct-lab" x="66" y="152">CARD NUMBER</text>
+  <text class="ct ct-num" x="66" y="170">AFC-CARD-4401982</text>
+
+  <!-- Holder -->
+  <text class="ct ct-lab" x="66" y="196">CARDHOLDER</text>
+  <text class="ct ct-name" x="66" y="212">NURUL AISYAH BINTI RAHMAN</text>
+
+  <!-- Balance -->
+  <text class="ct ct-lab" x="238" y="196">BALANCE</text>
+  <text class="ct ct-name" x="238" y="212" font-size="14">RM 68.40</text>
+
+  <!-- Bottom rule + issuer -->
+  <path d="M40 232h308" stroke="#ffffff" stroke-opacity=".14" stroke-width="1"/>
+  <text class="ct ct-sub" x="66" y="246" fill="#8fa6bd">RANGKAIAN TRANSIT NASIONAL · SAMPLE CARD</text>
+</svg>
